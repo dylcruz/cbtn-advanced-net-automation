@@ -1,0 +1,13 @@
+---
+
+euro_group:
+    username: "euro"
+    password: "europass"
+    data:
+        ntp_server: "4.4.4.4"
+
+usa_group:
+    username: "usa"
+    password: "usapass"
+    data:
+        ntp_server: "8.8.8.8"
