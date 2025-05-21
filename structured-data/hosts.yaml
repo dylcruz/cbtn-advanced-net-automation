@@ -1,0 +1,21 @@
+---
+
+R1:
+    hostname: "10.0.0.11"
+    groups:
+        - cisco_group
+
+R2:
+    hostname: "10.0.0.12"
+    groups:
+        - cisco_group
+
+R3:
+    hostname: "10.0.0.13"
+    groups:
+        - cisco_group
+
+R4:
+    hostname: "10.0.0.14"
+    groups:
+        - cisco_group
