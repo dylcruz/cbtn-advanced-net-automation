@@ -1,0 +1,9 @@
+---
+
+cisco_group:
+  platform: ios
+  connection_options:
+    scrapli_netconf:
+      port: 830
+      extras:
+        auth_strict_key: False
