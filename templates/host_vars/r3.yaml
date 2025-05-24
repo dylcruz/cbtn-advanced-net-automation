@@ -1,0 +1,14 @@
+---
+
+ospf:
+  ospf_rid: "3.3.3.3"
+  ospf_process: "1"
+  ospf_networks:
+      - ip: "192.168.3.0"
+        wildcard: "0.0.0.255"
+        area: "0"
+      - ip: "192.168.33.0"
+        wildcard: "0.0.0.255"
+        area: "3"
+snmp:
+  snmp_community: "Pickles2"
