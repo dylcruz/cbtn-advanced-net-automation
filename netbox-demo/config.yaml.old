@@ -1,0 +1,13 @@
+---
+
+inventory:
+  plugin: NetBoxInventory2
+  options:
+    nb_url: "https://10.0.0.79"
+    nb_token: "898876792416f291df0fa56a0a52c76e2881217a"
+    ssl_verify: false
+
+runner:
+  plugin: threaded
+  options:
+    num_workers: 1
