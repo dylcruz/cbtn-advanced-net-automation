@@ -1,0 +1,33 @@
+---
+
+R1:
+    hostname: "10.0.0.11"
+    groups:
+        - cisco_group
+    data:
+      region: "north"
+      coast: "east"
+
+R2:
+    hostname: "10.0.0.12"
+    groups:
+        - cisco_group
+    data:
+      region: "north"
+      coast: "west"
+
+R3:
+    hostname: "10.0.0.13"
+    groups:
+        - cisco_group
+    data:
+      region: "south"
+      coast: "east"
+
+R4:
+    hostname: "10.0.0.14"
+    groups:
+        - junos_group
+    data:
+      region: "south"
+      coast: "west"
