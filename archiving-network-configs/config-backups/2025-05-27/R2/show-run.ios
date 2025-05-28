@@ -1,0 +1,197 @@
+Building configuration...
+
+Current configuration : 4596 bytes
+!
+! Last configuration change at 23:34:06 UTC Sun May 25 2025 by dylan
+!
+version 15.9
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+vrf definition MGMT
+ !
+ address-family ipv4
+ exit-address-family
+!
+enable secret 9 $9$9zd6eLAUNrtVRs$8dOeScyv9oJ0s80VcsgheF9CVKPvujom7kdaaMgDZ7M
+!
+aaa new-model
+!
+!
+aaa authentication login default local
+aaa authorization exec default local
+!
+!
+!
+!
+!
+aaa session-id common
+!
+!
+!
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip domain name cisco.com
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+file prompt quiet
+username dylan privilege 15 password 0 password1
+username usa privilege 15 secret 9 $9$yfPy9wdbtomyfv$WTZiwEzQ5Oe1uxWcHb4HvW4H/NUe7PWsVTCjR024o6E
+username jradmin privilege 15 view restricted secret 9 $9$aM5s4EAhHfvcfM$tM0lAW0husiQYNm4M1edZT9KV/XqTpY6xBUa6AQZzAA
+!
+redundancy
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 22.22.22.22 255.255.255.255
+!
+interface GigabitEthernet0/0
+ description THIS IS A TEST description
+ vrf forwarding MGMT
+ ip address 10.0.0.12 255.255.255.0
+ duplex auto
+ speed auto
+ media-type rj45
+!
+interface GigabitEthernet0/1
+ ip address 10.100.0.9 255.255.255.252
+ duplex auto
+ speed auto
+ media-type rj45
+!
+interface GigabitEthernet0/2
+ ip address 10.100.0.13 255.255.255.252
+ duplex auto
+ speed auto
+ media-type rj45
+!
+interface GigabitEthernet0/3
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+ media-type rj45
+!
+router ospf 1
+ router-id 2.2.2.2
+ network 192.168.2.0 0.0.0.255 area 0
+ network 192.168.22.0 0.0.0.255 area 2
+!
+router bgp 65001
+ bgp log-neighbor-changes
+ neighbor 33.33.33.33 remote-as 65001
+ neighbor 33.33.33.33 update-source Loopback0
+ neighbor 44.44.44.44 remote-as 65001
+ neighbor 44.44.44.44 update-source Loopback0
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+ip ssh version 2
+ip scp server enable
+!
+ipv6 ioam timestamp
+!
+snmp-server community pickle RO
+snmp-server community Pickles RO
+snmp-server community Pickles2 RO
+snmp-server community PBarExample RO
+snmp-server chassis-id
+!
+!
+!
+!
+control-plane
+!
+banner exec ^C
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner incoming ^C
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner login ^C
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************^C
+banner motd ^C THIS IS AN AUTOMATED BANNER ^C
+parser view restricted
+ secret 5 $1$F7F9$xZ7v0FMukfy4.MEPFVOC71
+ commands exec include terminal length
+ commands exec include terminal
+ commands exec include all show ip
+ commands exec include show version
+ commands exec include show
+ commands exec include logout
+!
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ transport input ssh
+!
+no scheduler allocate
+ntp server 8.8.8.8
+ntp server 55.66.11.33
+ntp server 88.99.55.12
+ntp server 11.22.11.22
+!
+end
