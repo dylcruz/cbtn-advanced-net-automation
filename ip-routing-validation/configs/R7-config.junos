@@ -1,0 +1,102 @@
+## Last commit: 2025-06-05 20:55:35 UTC by root
+version 18.2R1.9;
+system {
+    login {
+        user dylan {
+            uid 2000;
+            class super-user;
+            authentication {
+                encrypted-password "$6$lzzzcuZs$wTcUnRtgLEPMCGwynwFd3JqmBLLSd8HfuzDqRI5NvFRNBUEC4oFM838u6mDMRDrwc0ypepRVgB.T9jFP1aHpg0"; ## SECRET-DATA
+            }
+        }
+    }
+    root-authentication {
+        encrypted-password "$6$tLBz3P5r$uQnfJr9gUPuMVFA/0otK8j9sUt5Bm6kKM60hDFf/wLNVEMed3Pddz0brSbGH/g9kb64lZ7NikUKZVjwzZLX5R1"; ## SECRET-DATA
+    }
+    host-name R7;
+    services {
+        ssh;
+    }
+    syslog {
+        user * {
+            any emergency;
+        }
+        file messages {
+            any notice;
+            authorization info;
+        }
+        file interactive-commands {
+            interactive-commands any;
+        }
+    }
+    processes {
+        dhcp-service {
+            traceoptions {
+                file dhcp_logfile size 10m;
+                level all;
+                flag packet;
+            }
+        }
+    }
+}
+interfaces {
+    ge-0/0/0 {
+        unit 0 {
+            family inet {
+                address 10.0.0.27/24;
+            }
+        }
+    }
+    ge-0/0/1 {
+        unit 0 {
+            family inet {
+                address 10.111.111.18/24;
+            }
+        }
+    }
+    ge-0/0/2 {
+        unit 0 {
+            family inet {
+                address 10.222.222.18/24;
+            }
+        }
+    }
+    fxp0 {
+        unit 0 {
+            family inet {
+                dhcp {
+                    vendor-id Juniper-vmx-VM6841EBB0B6;
+                }
+            }
+        }
+    }
+    lo0 {
+        unit 0 {
+            family inet {
+                address 77.77.77.77/32;
+            }
+        }
+    }
+}
+routing-options {
+    autonomous-system 65004;
+}
+protocols {
+    bgp {
+        group external-peers {
+            export Conn;
+            neighbor 10.111.111.17 {
+                peer-as 65001;
+            }
+            neighbor 10.222.222.17 {
+                peer-as 65001;
+            }
+        }
+    }
+}
+policy-options {
+    policy-statement Conn {
+        from interface lo0.0;
+        then accept;
+    }
+}
