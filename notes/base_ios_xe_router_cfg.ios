@@ -1,0 +1,29 @@
+hostname <CHANGE_ME>
+!
+vrf definition MGMT
+ !
+ address-family ipv4
+ exit-address-family
+!
+enable secret cisco
+!
+ip domain name cisco.com
+!
+username dylan privilege 15 password 0 password1
+!         
+interface GigabitEthernet1
+ vrf forwarding MGMT
+ ip address <CHANGE_ME>
+!
+ip ssh version 2
+!
+line con 0
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+ exit
+crypto key generate rsa mod 2048
+end
+wr mem
