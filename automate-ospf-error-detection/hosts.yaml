@@ -1,11 +1,11 @@
 ---
 
-R8:
+R8.cisco.com:
     hostname: "10.0.0.28"
     groups:
         - cisco_group
 
-R9:
+R9.cisco.com:
     hostname: "10.0.0.29"
     groups:
         - cisco_group

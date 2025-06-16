@@ -13,6 +13,9 @@ headers = { 'Accept': 'application/yang-data+json' }
 
 config_dict = defaultdict(dict)
 facts_dict = defaultdict(dict)
+network_error = []
+area_error = []
+timer_error = []
 
 def get_ospf(task):
     ospf_url = f'https://{task.host.hostname}:443/restconf/data/ospf-oper-data'
@@ -80,14 +83,64 @@ def get_cdp(task):
             try:
                 local_ip = config_dict[f'{task.host}'][local_intf][0]
                 local_mask = config_dict[f'{task.host}'][local_intf][1]
-                local_network = ipaddress.ip_network(local_ip + '/' + local_mask)
+                local_network = ipaddress.ip_network(local_ip + '/' + local_mask, strict=False)
                 remote_ip = config_dict[dev_name][port_id][0]
                 remote_mask = config_dict[dev_name][port_id][1]
+                remote_network = ipaddress.ip_network(remote_ip + '/' + remote_mask, strict=False)
+                
+                local_area = facts_dict[f'{task.host}'][local_intf][2]
+                remote_area = facts_dict[dev_name][port_id][2]
+                local_hello = facts_dict[f'{task.host}'][local_intf][1]
+                remote_hello = facts_dict[dev_name][port_id][1]
+                local_dead = facts_dict[f'{task.host}'][local_intf][0]
+                remote_dead = facts_dict[dev_name][port_id][0]
+
+                if not local_network == remote_network:
+                    network_error.append(
+                        (
+                        f'NETWORK MISMATCH: {task.host} {local_intf} {local_network} -'
+                        f' {dev_name} {port_id} {remote_network}'
+                        )
+                    )
+                
+                if not local_area == remote_area:
+                    area_error.append(
+                        (
+                        f'AREA MISMATCH: {task.host} {local_intf} area {local_area} -'
+                        f' {dev_name} {port_id} area {remote_area}'
+                        )
+                    )
+
+                if not local_hello == remote_hello:
+                    timer_error.append(
+                        (
+                        f'TIMER MISMATCH: {task.host} {local_intf} hello interval {local_hello} -'
+                        f' {dev_name} {port_id} hello interval {remote_hello}'
+                        )
+                    )
+                
+                if not local_dead == remote_dead:
+                    timer_error.append(
+                        (
+                        f'TIMER MISMATCH: {task.host} {local_intf} dead interval {local_dead} -'
+                        f' {dev_name} {port_id} dead interval {remote_dead}'
+                        )
+                    )
+
             except KeyError:
                 pass
 
 ospf_results = nr.run(get_ospf)
 cdp_results = nr.run(get_cdp)
 # print_result(results)
-import ipdb
-ipdb.set_trace()
+# import ipdb
+# ipdb.set_trace()
+
+if network_error:
+    for error in sorted(network_error): rprint(error)
+if area_error:
+    for error in sorted(area_error): rprint(error)
+if timer_error:
+    for error in sorted(timer_error): rprint(error)
+
+rprint("\n[yellow]*** SCAN COMPLETED ***[/yellow]\n")
