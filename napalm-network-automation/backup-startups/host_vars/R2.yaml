@@ -1,0 +1,12 @@
+ospf:
+  process_id: "1"
+  rid: 2.2.2.2
+  networks:
+    - net: 10.0.10.0
+      mask: 0.0.0.3
+      area: "0"
+
+vrfs:
+ - name: "MGMT"
+ - name: "TEST1"
+   rd: "65001:1"
