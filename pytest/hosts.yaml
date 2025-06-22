@@ -1,0 +1,43 @@
+---
+
+Spine1:
+    hostname: "10.0.0.21"
+    groups:
+        - cisco_group
+    data:
+      role: "Spine"
+
+Spine2:
+    hostname: "10.0.0.22"
+    groups:
+        - cisco_group
+    data:
+      role: "Spine"
+
+Leaf1:
+    hostname: "10.0.0.23"
+    groups:
+        - cisco_group
+    data:
+      role: "Leaf"
+
+Leaf2:
+    hostname: "10.0.0.24"
+    groups:
+        - cisco_group
+    data:
+      role: "Leaf"
+
+Leaf3:
+    hostname: "10.0.0.25"
+    groups:
+        - cisco_group
+    data:
+      role: "Leaf"
+
+Leaf4:
+    hostname: "10.0.0.26"
+    groups:
+        - cisco_group
+    data:
+      role: "Leaf"
