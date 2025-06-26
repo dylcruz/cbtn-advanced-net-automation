@@ -1,0 +1,88 @@
+(.venv) dylan@dylan-mba pyats % pyats run job test_job.py --testbed-file testbed.yaml
+2025-06-25T19:35:01: %EASYPY-INFO: Starting job run: test_job
+2025-06-25T19:35:01: %EASYPY-INFO: Runinfo directory: /Users/dylan/.pyats/runinfo/test_job.2025Jun25_19:35:00.786466
+2025-06-25T19:35:01: %EASYPY-INFO: --------------------------------------------------------------------------------
+2025-06-25T19:35:03: %EASYPY-INFO: +------------------------------------------------------------------------------+
+2025-06-25T19:35:03: %EASYPY-INFO: |                          Bringup/Clean Information                           |
+2025-06-25T19:35:03: %EASYPY-INFO: +------------------------------------------------------------------------------+
+2025-06-25T19:35:03: %EASYPY-INFO: {'bringup': {}, 'cleaners': {}, 'devices': {}}
+
+2025-06-25T19:35:03: %EASYPY-INFO: +------------------------------------------------------------------------------+
+2025-06-25T19:35:03: %EASYPY-INFO: |           Bringup/Clean Information after applying clean templates           |
+2025-06-25T19:35:03: %EASYPY-INFO: +------------------------------------------------------------------------------+
+2025-06-25T19:35:03: %EASYPY-INFO: {'bringup': {}, 'cleaners': {}, 'devices': {}}
+
+2025-06-25T19:35:03: %ATS-INFO: Checking all devices are up and ready is disabled, '--check-all-devices-up' must be set to True in case of pyats runs or '-check_all_devices_up' set to True in case of legacy easypy runs
+<module 'pyats.easypy.jobs.test_job' from '/Users/dylan/personal_projects/cbtn-advanced-net-automation/pyats/test_job.py'>
+2025-06-25T19:35:03: %EASYPY-INFO: Starting task execution: Task-1
+2025-06-25T19:35:03: %EASYPY-INFO:     test harness = pyats.aetest
+2025-06-25T19:35:03: %EASYPY-INFO:     testscript   = /Users/dylan/personal_projects/cbtn-advanced-net-automation/pyats/aetest_example.py
+<module 'pyats.aetest.testscript.aetest_example' from '/Users/dylan/personal_projects/cbtn-advanced-net-automation/pyats/aetest_example.py'>
+2025-06-25T19:35:03: %EASYPY-INFO: Starting task execution: Task-2
+2025-06-25T19:35:03: %EASYPY-INFO:     test harness = pyats.aetest
+2025-06-25T19:35:03: %EASYPY-INFO:     testscript   = /Users/dylan/personal_projects/cbtn-advanced-net-automation/pyats/aetest_example2.py
+<module 'pyats.aetest.testscript.aetest_example2' from '/Users/dylan/personal_projects/cbtn-advanced-net-automation/pyats/aetest_example2.py'>
+2025-06-25T19:35:04: %CONTRIB-INFO: WebEx Token not given as argument or in config. No WebEx notification will be sent
+2025-06-25T19:35:04: %GENIE-INFO: Saving Abstract Tree...
+2025-06-25T19:35:04: %GENIE-INFO: Abstract Tree saved
+2025-06-25T19:35:04: %EASYPY-INFO: --------------------------------------------------------------------------------
+2025-06-25T19:35:04: %EASYPY-INFO: Job finished. Wrapping up...
+2025-06-25T19:35:04: %EASYPY-INFO: Creating archive file: /Users/dylan/.pyats/archive/25-06/test_job.2025Jun25_19:35:00.786466.zip
+2025-06-25T19:35:04: %EASYPY-INFO: +------------------------------------------------------------------------------+
+2025-06-25T19:35:04: %EASYPY-INFO: |                                Easypy Report                                 |
+2025-06-25T19:35:04: %EASYPY-INFO: +------------------------------------------------------------------------------+
+2025-06-25T19:35:04: %EASYPY-INFO: pyATS Instance   : /Users/dylan/personal_projects/cbtn-advanced-net-automation/.venv
+2025-06-25T19:35:04: %EASYPY-INFO: Python Version   : cpython-3.11.12 (64bit)
+2025-06-25T19:35:04: %EASYPY-INFO: CLI Arguments    : /Users/dylan/personal_projects/cbtn-advanced-net-automation/.venv/bin/pyats run job test_job.py --testbed-file testbed.yaml
+2025-06-25T19:35:04: %EASYPY-INFO: User             : dylan
+2025-06-25T19:35:04: %EASYPY-INFO: Host Server      : dylan-mba.local
+2025-06-25T19:35:04: %EASYPY-INFO: Host OS Version  : Mac OSX 15.5 (arm64)
+2025-06-25T19:35:04: %EASYPY-INFO: 
+2025-06-25T19:35:04: %EASYPY-INFO: Job Information
+2025-06-25T19:35:04: %EASYPY-INFO:     Name         : test_job
+2025-06-25T19:35:04: %EASYPY-INFO:     Result       : 0
+2025-06-25T19:35:04: %EASYPY-INFO:     Start time   : 2025-06-25 19:35:03.806058-07:00
+2025-06-25T19:35:04: %EASYPY-INFO:     Stop time    : 2025-06-25 19:35:04.044608-07:00
+2025-06-25T19:35:04: %EASYPY-INFO:     Elapsed time : 0:00:01
+2025-06-25T19:35:04: %EASYPY-INFO:     Archive      : /Users/dylan/.pyats/archive/25-06/test_job.2025Jun25_19:35:00.786466.zip
+2025-06-25T19:35:04: %EASYPY-INFO: 
+2025-06-25T19:35:04: %EASYPY-INFO: Total Tasks    : 2 
+2025-06-25T19:35:04: %EASYPY-INFO: 
+2025-06-25T19:35:04: %EASYPY-INFO: Overall Stats
+2025-06-25T19:35:04: %EASYPY-INFO:     Passed     : 0
+2025-06-25T19:35:04: %EASYPY-INFO:     Passx      : 0
+2025-06-25T19:35:04: %EASYPY-INFO:     Failed     : 0
+2025-06-25T19:35:04: %EASYPY-INFO:     Aborted    : 0
+2025-06-25T19:35:04: %EASYPY-INFO:     Blocked    : 0
+2025-06-25T19:35:04: %EASYPY-INFO:     Skipped    : 0
+2025-06-25T19:35:04: %EASYPY-INFO:     Errored    : 0
+2025-06-25T19:35:04: %EASYPY-INFO: 
+2025-06-25T19:35:04: %EASYPY-INFO:     TOTAL      : 0
+2025-06-25T19:35:04: %EASYPY-INFO: 
+2025-06-25T19:35:04: %EASYPY-INFO: Success Rate   : 0.00 %
+2025-06-25T19:35:04: %EASYPY-INFO: 
+2025-06-25T19:35:04: %EASYPY-INFO: Section Stats
+2025-06-25T19:35:04: %EASYPY-INFO:     Passed     : 0
+2025-06-25T19:35:04: %EASYPY-INFO:     Passx      : 0
+2025-06-25T19:35:04: %EASYPY-INFO:     Failed     : 0
+2025-06-25T19:35:04: %EASYPY-INFO:     Aborted    : 0
+2025-06-25T19:35:04: %EASYPY-INFO:     Blocked    : 0
+2025-06-25T19:35:04: %EASYPY-INFO:     Skipped    : 0
+2025-06-25T19:35:04: %EASYPY-INFO:     Errored    : 0
+2025-06-25T19:35:04: %EASYPY-INFO: 
+2025-06-25T19:35:04: %EASYPY-INFO:     TOTAL      : 0
+2025-06-25T19:35:04: %EASYPY-INFO: 
+2025-06-25T19:35:04: %EASYPY-INFO: Section Success Rate   : 0.00 %
+2025-06-25T19:35:04: %EASYPY-INFO: 
+2025-06-25T19:35:04: %EASYPY-INFO: +------------------------------------------------------------------------------+
+2025-06-25T19:35:04: %EASYPY-INFO: |                             Task Result Summary                              |
+2025-06-25T19:35:04: %EASYPY-INFO: +------------------------------------------------------------------------------+
+2025-06-25T19:35:04: %EASYPY-INFO: Empty - did something go wrong?
+2025-06-25T19:35:04: %EASYPY-INFO: 
+2025-06-25T19:35:04: %EASYPY-INFO: +------------------------------------------------------------------------------+
+2025-06-25T19:35:04: %EASYPY-INFO: |                             Task Result Details                              |
+2025-06-25T19:35:04: %EASYPY-INFO: +------------------------------------------------------------------------------+
+2025-06-25T19:35:04: %EASYPY-INFO: Empty - did something go wrong?
+2025-06-25T19:35:04: %EASYPY-INFO: Sending report email...
+2025-06-25T19:35:04: %EASYPY-INFO: Missing SMTP server configuration, or failed to reach/authenticate/send mail. Result notification email failed to send.
+2025-06-25T19:35:05: %EASYPY-INFO: Done!

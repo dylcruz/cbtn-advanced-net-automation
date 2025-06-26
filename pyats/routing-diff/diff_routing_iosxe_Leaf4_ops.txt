@@ -1,0 +1,22 @@
+--- routing-pre/routing_iosxe_Leaf4_ops.txt
++++ routing-post/routing_iosxe_Leaf4_ops.txt
+ info:
+  vrf:
+   default:
+    address_family:
+     ipv4:
+      routes:
++      77.77.77.77/32:
++       active: True
++       metric: 2
++       next_hop:
++        next_hop_list:
++         1:
++          index: 1
++          next_hop: 10.0.10.13
++          outgoing_interface: GigabitEthernet0/1
++          updated: 00:03:29
++       route: 77.77.77.77/32
++       route_preference: 110
++       source_protocol: ospf
++       source_protocol_codes: O

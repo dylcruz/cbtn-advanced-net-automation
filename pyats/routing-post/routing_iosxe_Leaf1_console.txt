@@ -1,0 +1,85 @@
++++ Leaf1 with via 'cli': executing command 'show vrf detail' +++
+show vrf detail
+VRF MGMT (VRF Id = 1); default RD <not set>; default VPNID <not set>
+  New CLI format, supports multiple address-families
+  Flags: 0x1808
+  Interfaces:
+    Gi0/0                   
+Address family ipv4 unicast (Table ID = 0x1):
+  Flags: 0x0
+  No Export VPN route-target communities
+  No Import VPN route-target communities
+  No import route-map
+  No global export route-map
+  No export route-map
+  VRF label distribution protocol: not configured
+  VRF label allocation mode: per-prefix
+Address family ipv6 unicast not active
+
+Leaf1#
++++ Leaf1 with via 'cli': executing command 'show ip route vrf MGMT' +++
+show ip route vrf MGMT
+
+Routing Table: MGMT
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+
+Gateway of last resort is not set
+
+      10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+C        10.0.0.0/24 is directly connected, GigabitEthernet0/0
+L        10.0.0.23/32 is directly connected, GigabitEthernet0/0
+Leaf1#
++++ Leaf1 with via 'cli': executing command 'show ip route' +++
+show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+
+Gateway of last resort is not set
+
+      10.0.0.0/8 is variably subnetted, 10 subnets, 2 masks
+C        10.0.10.0/30 is directly connected, GigabitEthernet0/1
+L        10.0.10.2/32 is directly connected, GigabitEthernet0/1
+O        10.0.10.4/30 [110/2] via 10.0.10.1, 00:16:28, GigabitEthernet0/1
+O        10.0.10.8/30 [110/2] via 10.0.10.1, 00:16:28, GigabitEthernet0/1
+O        10.0.10.12/30 [110/2] via 10.0.10.1, 00:16:28, GigabitEthernet0/1
+C        10.0.20.0/30 is directly connected, GigabitEthernet0/2
+L        10.0.20.2/32 is directly connected, GigabitEthernet0/2
+O        10.0.20.4/30 [110/2] via 10.0.20.1, 1d23h, GigabitEthernet0/2
+O        10.0.20.8/30 [110/2] via 10.0.20.1, 1d23h, GigabitEthernet0/2
+O        10.0.20.12/30 [110/2] via 10.0.20.1, 1d23h, GigabitEthernet0/2
+      77.0.0.0/32 is subnetted, 1 subnets
+O        77.77.77.77 [110/2] via 10.0.10.1, 00:03:28, GigabitEthernet0/1
+Leaf1#
++++ Leaf1 with via 'cli': executing command 'show ipv6 route' +++
+show ipv6 route
+Leaf1#
+Could not learn <class 'genie.libs.parser.iosxe.show_routing.ShowIpv6RouteDistributor'> on <unicon.plugins.iosxe.IosXESingleRpConnection object at 0x11393f010>
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'Routing'                                                                                                            |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_vrf.ShowVrfDetail'>                                                                                    |
+|   cmd: <class 'genie.libs.parser.iosxe.show_routing.ShowIpRouteDistributor'>, arguments: {'vrf':'MGMT'}                                            |
+|   cmd: <class 'genie.libs.parser.iosxe.show_routing.ShowIpRouteDistributor'>, arguments: {'vrf':''}                                                |
+|====================================================================================================================================================|
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_routing.ShowIpv6RouteDistributor'>, arguments: {'vrf':''}                                              |
+|====================================================================================================================================================|

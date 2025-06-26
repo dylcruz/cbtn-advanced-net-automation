@@ -1,0 +1,28 @@
+--- ospf-after/ospf_iosxe_Leaf1_ops.txt
++++ another-ospf/ospf_iosxe_Leaf1_ops.txt
+ info:
+  vrf:
+   default:
+    address_family:
+     ipv4:
+      instance:
+       1:
+        areas:
+         0.0.0.0:
+          interfaces:
+           GigabitEthernet0/1:
+-           enable: False
++           enable: True
++           lls: True
++           neighbors:
++            1.1.1.1:
++             address: 10.0.10.1
++             bdr_ip_addr: 10.0.10.2
++             dead_timer: 00:00:33
++             dr_ip_addr: 10.0.10.1
++             neighbor_router_id: 1.1.1.1
++             state: full
++             statistics:
++              nbr_event_count: 6
++              nbr_retrans_qlen: 0
++           passive: False

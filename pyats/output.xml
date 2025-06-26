@@ -1,0 +1,4625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.11.12 on darwin)" generated="2025-06-25T16:55:06.382647" rpa="false" schemaversion="5">
+<suite id="s1" name="Ospf1" source="/Users/dylan/personal_projects/cbtn-advanced-net-automation/pyats/ospf1.robot">
+<test id="s1-t1" name="Connect to device" line="8">
+<kw name="use genie testbed &quot;testbed.yaml&quot;" owner="genie.libs.robot.GenieRobot" source_name="use genie testbed &quot;${testbed}&quot;">
+<msg time="2025-06-25T16:55:07.300896" level="INFO">+------------------------------------------------------------------------------+
+|                            Genie datafiles used:                             |
++------------------------------------------------------------------------------+</msg>
+<msg time="2025-06-25T16:55:07.300950" level="INFO">Trigger datafile          | </msg>
+<msg time="2025-06-25T16:55:07.300974" level="INFO">Verification  datafile    | </msg>
+<msg time="2025-06-25T16:55:07.300997" level="INFO">Pts datafile              | /Users/dylan/personal_projects/cbtn-advanced-net-automation/.venv/lib/python3.11/site-packages/genie/libs/sdk/genie_yamls/pts_datafile.yaml</msg>
+<msg time="2025-06-25T16:55:07.301023" level="INFO">Subsection datafile       | /Users/dylan/personal_projects/cbtn-advanced-net-automation/.venv/lib/python3.11/site-packages/genie/libs/sdk/genie_yamls/subsection_datafile.yaml</msg>
+<msg time="2025-06-25T16:55:07.301043" level="INFO">Config datafile           | None</msg>
+<msg time="2025-06-25T16:55:07.305035" level="WARN">Could not load the trigger datafile correctly, did you specify 'uut' device alias?</msg>
+<status status="PASS" start="2025-06-25T16:55:07.214274" elapsed="0.090870"/>
+</kw>
+<kw name="connect to all devices" owner="ats.robot.pyATSRobot">
+<msg time="2025-06-25T16:55:07.305400" level="INFO">Connecting to device 'Device Leaf1, type iosxe'</msg>
+<msg time="2025-06-25T16:55:07.305424" level="INFO">kwargs: {}</msg>
+<msg time="2025-06-25T16:55:13.428818" level="INFO">Connecting to device 'Device Leaf2, type iosxe'</msg>
+<msg time="2025-06-25T16:55:13.428957" level="INFO">kwargs: {}</msg>
+<msg time="2025-06-25T16:55:19.424631" level="INFO">Connecting to device 'Device Leaf3, type iosxe'</msg>
+<msg time="2025-06-25T16:55:19.424723" level="INFO">kwargs: {}</msg>
+<msg time="2025-06-25T16:55:25.589834" level="INFO">Connecting to device 'Device Leaf4, type iosxe'</msg>
+<msg time="2025-06-25T16:55:25.589948" level="INFO">kwargs: {}</msg>
+<msg time="2025-06-25T16:55:31.802486" level="INFO">Connecting to device 'Device Spine1, type iosxe'</msg>
+<msg time="2025-06-25T16:55:31.802598" level="INFO">kwargs: {}</msg>
+<msg time="2025-06-25T16:55:38.002815" level="INFO">Connecting to device 'Device Spine2, type iosxe'</msg>
+<msg time="2025-06-25T16:55:38.002926" level="INFO">kwargs: {}</msg>
+<msg time="2025-06-25T16:55:44.145442" level="INFO">2025-06-25 16:55:07,306: %UNICON-INFO: +++ Leaf1 logfile /tmp/Leaf1-cli-20250625T165507305.log +++
+
+2025-06-25 16:55:07,306: %UNICON-INFO: +++ Unicon plugin iosxe (unicon.plugins.iosxe) +++
+
+
+2025-06-25 16:55:09,800: %UNICON-INFO: +++ connection to spawn: ssh -l dylan 10.0.0.23, id: 4551283664 +++
+
+2025-06-25 16:55:09,801: %UNICON-INFO: connection to Leaf1
+(dylan@10.0.0.23) Password: 
+
+Leaf1#
+
+Leaf1#
+
+2025-06-25 16:55:10,234: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show version | include operating mode' +++
+show version | include operating mode
+Leaf1#
+
+2025-06-25 16:55:10,589: %UNICON-INFO: +++ initializing handle +++
+
+2025-06-25 16:55:10,821: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'term length 0' +++
+term length 0
+Leaf1#
+
+2025-06-25 16:55:11,262: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'term width 0' +++
+term width 0
+Leaf1#
+
+2025-06-25 16:55:11,683: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Experimental Version 15.2(20200924:215240) [sweickge-sep24-2020-l2iol-release 135]
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Tue 29-Sep-20 11:53 by sweickge
+
+
+ROM: Bootstrap program is IOSv
+
+Leaf1 uptime is 4 days, 2 hours, 34 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios_l2-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv () processor (revision 1.0) with 935169K/111616K bytes of memory.
+Processor board ID 9VOP4Y8Q1SK
+10 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+0K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+Configuration register is 0x101
+
+Leaf1#
+
+2025-06-25 16:55:11,893: %UNICON-INFO: +++ Leaf1 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+Leaf1(config)#no logging console
+Leaf1(config)#line console 0
+Leaf1(config-line)#exec-timeout 0
+Leaf1(config-line)#line vty 0 4
+Leaf1(config-line)#exec-timeout 0
+Leaf1(config-line)#end
+Leaf1#
+
+2025-06-25 16:55:12,960: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show install summary' +++
+show install summary
+show install summary
+       ^
+% Invalid input detected at '^' marker.
+
+Leaf1#
+
+2025-06-25 16:55:13,209: %UNICON-ERROR: Could not learn the os version
+
+2025-06-25 16:55:13,430: %UNICON-INFO: +++ Leaf2 logfile /tmp/Leaf2-cli-20250625T165513429.log +++
+
+2025-06-25 16:55:13,430: %UNICON-INFO: +++ Unicon plugin iosxe (unicon.plugins.iosxe) +++
+
+
+2025-06-25 16:55:15,830: %UNICON-INFO: +++ connection to spawn: ssh -l dylan 10.0.0.24, id: 4786914960 +++
+
+2025-06-25 16:55:15,831: %UNICON-INFO: connection to Leaf2
+(dylan@10.0.0.24) Password: 
+
+Leaf2#
+
+Leaf2#
+
+2025-06-25 16:55:16,237: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show version | include operating mode' +++
+show version | include operating mode
+Leaf2#
+
+2025-06-25 16:55:16,587: %UNICON-INFO: +++ initializing handle +++
+
+2025-06-25 16:55:16,808: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'term length 0' +++
+term length 0
+Leaf2#
+
+2025-06-25 16:55:17,218: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'term width 0' +++
+term width 0
+Leaf2#
+
+2025-06-25 16:55:17,647: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Experimental Version 15.2(20200924:215240) [sweickge-sep24-2020-l2iol-release 135]
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Tue 29-Sep-20 11:53 by sweickge
+
+
+ROM: Bootstrap program is IOSv
+
+Leaf2 uptime is 4 days, 2 hours, 34 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios_l2-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv () processor (revision 1.0) with 935169K/111616K bytes of memory.
+Processor board ID 9QH7UO53GRE
+10 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+0K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+Configuration register is 0x101
+
+Leaf2#
+
+2025-06-25 16:55:17,859: %UNICON-INFO: +++ Leaf2 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+Leaf2(config)#no logging console
+Leaf2(config)#line console 0
+Leaf2(config-line)#exec-timeout 0
+Leaf2(config-line)#line vty 0 4
+Leaf2(config-line)#exec-timeout 0
+Leaf2(config-line)#end
+Leaf2#
+
+2025-06-25 16:55:18,944: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show install summary' +++
+show install summary
+show install summary
+       ^
+% Invalid input detected at '^' marker.
+
+Leaf2#
+
+2025-06-25 16:55:19,195: %UNICON-ERROR: Could not learn the os version
+
+2025-06-25 16:55:19,425: %UNICON-INFO: +++ Leaf3 logfile /tmp/Leaf3-cli-20250625T165519425.log +++
+
+2025-06-25 16:55:19,425: %UNICON-INFO: +++ Unicon plugin iosxe (unicon.plugins.iosxe) +++
+
+
+2025-06-25 16:55:21,844: %UNICON-INFO: +++ connection to spawn: ssh -l dylan 10.0.0.25, id: 4786253136 +++
+
+2025-06-25 16:55:21,845: %UNICON-INFO: connection to Leaf3
+(dylan@10.0.0.25) Password: 
+
+Leaf3#
+
+Leaf3#
+
+2025-06-25 16:55:22,260: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show version | include operating mode' +++
+show version | include operating mode
+Leaf3#
+
+2025-06-25 16:55:22,603: %UNICON-INFO: +++ initializing handle +++
+
+2025-06-25 16:55:22,845: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'term length 0' +++
+term length 0
+Leaf3#
+
+2025-06-25 16:55:23,297: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'term width 0' +++
+term width 0
+Leaf3#
+
+2025-06-25 16:55:23,755: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Experimental Version 15.2(20200924:215240) [sweickge-sep24-2020-l2iol-release 135]
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Tue 29-Sep-20 11:53 by sweickge
+
+
+ROM: Bootstrap program is IOSv
+
+Leaf3 uptime is 4 days, 2 hours, 34 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios_l2-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv () processor (revision 1.0) with 935169K/111616K bytes of memory.
+Processor board ID 9EK96GTN276
+10 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+0K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+Configuration register is 0x101
+
+Leaf3#
+
+2025-06-25 16:55:24,006: %UNICON-INFO: +++ Leaf3 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+Leaf3(config)#no logging console
+Leaf3(config)#line console 0
+Leaf3(config-line)#exec-timeout 0
+Leaf3(config-line)#line vty 0 4
+Leaf3(config-line)#exec-timeout 0
+Leaf3(config-line)#end
+Leaf3#
+
+2025-06-25 16:55:25,095: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show install summary' +++
+show install summary
+show install summary
+       ^
+% Invalid input detected at '^' marker.
+
+Leaf3#
+
+2025-06-25 16:55:25,368: %UNICON-ERROR: Could not learn the os version
+
+2025-06-25 16:55:25,590: %UNICON-INFO: +++ Leaf4 logfile /tmp/Leaf4-cli-20250625T165525590.log +++
+
+2025-06-25 16:55:25,591: %UNICON-INFO: +++ Unicon plugin iosxe (unicon.plugins.iosxe) +++
+
+
+2025-06-25 16:55:28,021: %UNICON-INFO: +++ connection to spawn: ssh -l dylan 10.0.0.26, id: 4785620496 +++
+
+2025-06-25 16:55:28,022: %UNICON-INFO: connection to Leaf4
+(dylan@10.0.0.26) Password: 
+
+Leaf4#
+
+Leaf4#
+
+2025-06-25 16:55:28,491: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show version | include operating mode' +++
+show version | include operating mode
+Leaf4#
+
+2025-06-25 16:55:28,835: %UNICON-INFO: +++ initializing handle +++
+
+2025-06-25 16:55:29,085: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'term length 0' +++
+term length 0
+Leaf4#
+
+2025-06-25 16:55:29,563: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'term width 0' +++
+term width 0
+Leaf4#
+
+2025-06-25 16:55:30,019: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Experimental Version 15.2(20200924:215240) [sweickge-sep24-2020-l2iol-release 135]
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Tue 29-Sep-20 11:53 by sweickge
+
+
+ROM: Bootstrap program is IOSv
+
+Leaf4 uptime is 4 days, 2 hours, 34 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios_l2-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv () processor (revision 1.0) with 935169K/111616K bytes of memory.
+Processor board ID 9X721K71VPA
+10 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+0K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+Configuration register is 0x101
+
+Leaf4#
+
+2025-06-25 16:55:30,258: %UNICON-INFO: +++ Leaf4 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+Leaf4(config)#no logging console
+Leaf4(config)#line console 0
+Leaf4(config-line)#exec-timeout 0
+Leaf4(config-line)#line vty 0 4
+Leaf4(config-line)#exec-timeout 0
+Leaf4(config-line)#end
+Leaf4#
+
+2025-06-25 16:55:31,317: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show install summary' +++
+show install summary
+show install summary
+       ^
+% Invalid input detected at '^' marker.
+
+Leaf4#
+
+2025-06-25 16:55:31,571: %UNICON-ERROR: Could not learn the os version
+
+2025-06-25 16:55:31,803: %UNICON-INFO: +++ Spine1 logfile /tmp/Spine1-cli-20250625T165531803.log +++
+
+2025-06-25 16:55:31,803: %UNICON-INFO: +++ Unicon plugin iosxe (unicon.plugins.iosxe) +++
+
+
+2025-06-25 16:55:34,270: %UNICON-INFO: +++ connection to spawn: ssh -l dylan 10.0.0.21, id: 4785209552 +++
+
+2025-06-25 16:55:34,271: %UNICON-INFO: connection to Spine1
+(dylan@10.0.0.21) Password: 
+
+Spine1#
+
+Spine1#
+
+2025-06-25 16:55:34,746: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show version | include operating mode' +++
+show version | include operating mode
+Spine1#
+
+2025-06-25 16:55:35,095: %UNICON-INFO: +++ initializing handle +++
+
+2025-06-25 16:55:35,320: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'term length 0' +++
+term length 0
+Spine1#
+
+2025-06-25 16:55:35,792: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'term width 0' +++
+term width 0
+Spine1#
+
+2025-06-25 16:55:36,247: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Experimental Version 15.2(20200924:215240) [sweickge-sep24-2020-l2iol-release 135]
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Tue 29-Sep-20 11:53 by sweickge
+
+
+ROM: Bootstrap program is IOSv
+
+Spine1 uptime is 4 days, 2 hours, 36 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios_l2-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv () processor (revision 1.0) with 935169K/111616K bytes of memory.
+Processor board ID 92H0DKUQCUR
+12 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+0K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+Configuration register is 0x101
+
+Spine1#
+
+2025-06-25 16:55:36,477: %UNICON-INFO: +++ Spine1 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+Spine1(config)#no logging console
+Spine1(config)#line console 0
+Spine1(config-line)#exec-timeout 0
+Spine1(config-line)#line vty 0 4
+Spine1(config-line)#exec-timeout 0
+Spine1(config-line)#end
+Spine1#
+
+2025-06-25 16:55:37,535: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show install summary' +++
+show install summary
+show install summary
+       ^
+% Invalid input detected at '^' marker.
+
+Spine1#
+
+2025-06-25 16:55:37,776: %UNICON-ERROR: Could not learn the os version
+
+2025-06-25 16:55:38,003: %UNICON-INFO: +++ Spine2 logfile /tmp/Spine2-cli-20250625T165538003.log +++
+
+2025-06-25 16:55:38,003: %UNICON-INFO: +++ Unicon plugin iosxe (unicon.plugins.iosxe) +++
+
+
+2025-06-25 16:55:40,417: %UNICON-INFO: +++ connection to spawn: ssh -l dylan 10.0.0.22, id: 4786813264 +++
+
+2025-06-25 16:55:40,417: %UNICON-INFO: connection to Spine2
+(dylan@10.0.0.22) Password: 
+
+Spine2#
+
+Spine2#
+
+2025-06-25 16:55:40,874: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show version | include operating mode' +++
+show version | include operating mode
+Spine2#
+
+2025-06-25 16:55:41,197: %UNICON-INFO: +++ initializing handle +++
+
+2025-06-25 16:55:41,426: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'term length 0' +++
+term length 0
+Spine2#
+
+2025-06-25 16:55:41,833: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'term width 0' +++
+term width 0
+Spine2#
+
+2025-06-25 16:55:42,274: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, vios_l2 Software (vios_l2-ADVENTERPRISEK9-M), Experimental Version 15.2(20200924:215240) [sweickge-sep24-2020-l2iol-release 135]
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Tue 29-Sep-20 11:53 by sweickge
+
+
+ROM: Bootstrap program is IOSv
+
+Spine2 uptime is 4 days, 2 hours, 36 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios_l2-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv () processor (revision 1.0) with 935169K/111616K bytes of memory.
+Processor board ID 9O1R0L6KWRY
+12 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+0K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+Configuration register is 0x101
+
+Spine2#
+
+2025-06-25 16:55:42,515: %UNICON-INFO: +++ Spine2 with via 'cli': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+Spine2(config)#no logging console
+Spine2(config)#line console 0
+Spine2(config-line)#exec-timeout 0
+Spine2(config-line)#line vty 0 4
+Spine2(config-line)#exec-timeout 0
+Spine2(config-line)#end
+Spine2#
+
+2025-06-25 16:55:43,657: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show install summary' +++
+show install summary
+show install summary
+       ^
+% Invalid input detected at '^' marker.
+
+Spine2#
+
+2025-06-25 16:55:43,922: %UNICON-ERROR: Could not learn the os version</msg>
+<doc>Connect to all devices</doc>
+<status status="PASS" start="2025-06-25T16:55:07.305306" elapsed="36.840476"/>
+</kw>
+<status status="PASS" start="2025-06-25T16:55:07.213930" elapsed="36.932206"/>
+</test>
+<test id="s1-t2" name="Verify OSPF Neighbors" line="12">
+<kw name="verify count &quot;4&quot; &quot;ospf neighbors&quot; on device &quot;Spine1&quot;" owner="genie.libs.robot.GenieRobot" source_name="verify count &quot;${number:[^&quot;]+}&quot; &quot;${structure:[^&quot;]+}&quot; on device &quot;${device:[^&quot;]+}&quot;">
+<msg time="2025-06-25T16:55:54.833248" level="INFO">Could not learn &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfVirtualLinks'&gt; on &lt;unicon.plugins.iosxe.IosXESingleRpConnection object at 0x11d3662d0&gt;
+Show Command: show ip ospf virtual-links
+Parser Output is empty</msg>
+<msg time="2025-06-25T16:56:19.892341" level="INFO">Could not learn &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfShamLinks'&gt; on &lt;unicon.plugins.iosxe.IosXESingleRpConnection object at 0x11d3662d0&gt;
+Show Command: show ip ospf sham-links
+Parser Output is empty</msg>
+<msg time="2025-06-25T16:56:19.893622" level="INFO">+====================================================================================================================================================+</msg>
+<msg time="2025-06-25T16:56:19.893660" level="INFO">| Commands for learning feature 'Ospf'                                                                                                               |</msg>
+<msg time="2025-06-25T16:56:19.893689" level="INFO">+====================================================================================================================================================+</msg>
+<msg time="2025-06-25T16:56:19.893715" level="INFO">| - Parsed commands                                                                                                                                  |</msg>
+<msg time="2025-06-25T16:56:19.893738" level="INFO">|----------------------------------------------------------------------------------------------------------------------------------------------------|</msg>
+<msg time="2025-06-25T16:56:19.893760" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspf'&gt;                                                                                      |</msg>
+<msg time="2025-06-25T16:56:19.893783" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_protocols.ShowIpProtocols'&gt;, arguments: {'vrf':''}                                                     |</msg>
+<msg time="2025-06-25T16:56:19.893805" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfMplsLdpInterface'&gt;, arguments: {'interface':''}                                         |</msg>
+<msg time="2025-06-25T16:56:19.893827" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfMplsTrafficEngLink'&gt;                                                                    |</msg>
+<msg time="2025-06-25T16:56:19.893848" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseRouter'&gt;                                                               |</msg>
+<msg time="2025-06-25T16:56:19.893871" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseNetwork'&gt;                                                              |</msg>
+<msg time="2025-06-25T16:56:19.893892" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseExternal'&gt;                                                             |</msg>
+<msg time="2025-06-25T16:56:19.893914" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseSummary'&gt;                                                              |</msg>
+<msg time="2025-06-25T16:56:19.893936" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseOpaqueArea'&gt;                                                           |</msg>
+<msg time="2025-06-25T16:56:19.893957" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfInterface'&gt;, arguments: {'interface':''}                                                |</msg>
+<msg time="2025-06-25T16:56:19.893978" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfNeighborDetail'&gt;, arguments: {'neighbor':''}                                            |</msg>
+<msg time="2025-06-25T16:56:19.893999" level="INFO">|====================================================================================================================================================|</msg>
+<msg time="2025-06-25T16:56:19.894020" level="INFO">| - Commands with empty output                                                                                                                       |</msg>
+<msg time="2025-06-25T16:56:19.894040" level="INFO">|----------------------------------------------------------------------------------------------------------------------------------------------------|</msg>
+<msg time="2025-06-25T16:56:19.894061" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfVirtualLinks'&gt;                                                                          |</msg>
+<msg time="2025-06-25T16:56:19.894082" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfShamLinks'&gt;                                                                             |</msg>
+<msg time="2025-06-25T16:56:19.894104" level="INFO">|====================================================================================================================================================|</msg>
+<msg time="2025-06-25T16:56:19.954881" level="INFO">2025-06-25 16:55:45,287: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip ospf' +++
+show ip ospf
+ Routing Process "ospf 1" with ID 1.1.1.1
+ Start time: 00:07:48.443, Time elapsed: 4d02h
+ Supports only single TOS(TOS0) routes
+ Supports opaque LSA
+ Supports Link-local Signaling (LLS)
+ Supports area transit capability
+ Supports NSSA (compatible with RFC 3101)
+ Does not support Database Exchange Summary List Optimization (RFC 5243)
+ Event-log enabled, Maximum number of events: 1000, Mode: cyclic
+ Router is not originating router-LSAs with maximum metric
+ Initial SPF schedule delay 5000 msecs
+ Minimum hold time between two consecutive SPFs 10000 msecs
+ Maximum wait time between two consecutive SPFs 10000 msecs
+ Incremental-SPF disabled
+ Minimum LSA interval 5 secs
+ Minimum LSA arrival 1000 msecs
+ LSA group pacing timer 240 secs
+ Interface flood pacing timer 33 msecs
+ Retransmission pacing timer 66 msecs
+ Number of external LSA 0. Checksum Sum 0x000000
+ Number of opaque AS LSA 0. Checksum Sum 0x000000
+ Number of DCbitless external and opaque AS LSA 0
+ Number of DoNotAge external and opaque AS LSA 0
+ Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+ Number of areas transit capable is 0
+ External flood list length 0
+ IETF NSF helper support enabled
+ Cisco NSF helper support enabled
+ Reference bandwidth unit is 100 mbps
+    Area BACKBONE(0)
+        Number of interfaces in this area is 5 (1 loopback)
+	Area has no authentication
+	SPF algorithm last executed 2d03h ago
+	SPF algorithm executed 18 times
+	Area ranges are
+	Number of LSA 14. Checksum Sum 0x06EB22
+	Number of opaque link LSA 0. Checksum Sum 0x000000
+	Number of DCbitless LSA 0
+	Number of indication LSA 0
+	Number of DoNotAge LSA 0
+	Flood list length 0
+
+Spine1#
+
+2025-06-25 16:55:45,752: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip protocols' +++
+show ip protocols
+*** IP Routing is NSF aware ***
+
+Routing Protocol is "application"
+  Sending updates every 0 seconds
+  Invalid after 0 seconds, hold down 0, flushed after 0
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Maximum path: 32
+  Routing for Networks:
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+  Distance: (default is 4)
+
+Routing Protocol is "ospf 1"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Router ID 1.1.1.1
+  Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+  Routing on Interfaces Configured Explicitly (Area 0):
+    Loopback77
+    GigabitEthernet1/0
+    GigabitEthernet0/3
+    GigabitEthernet0/2
+    GigabitEthernet0/1
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+    6.6.6.6              110      4d02h
+    2.2.2.2              110      2d03h
+    3.3.3.3              110      4d02h
+  Distance: (default is 110)
+
+Spine1#
+
+2025-06-25 16:55:46,228: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 1.1.1.1
+Spine1#
+
+2025-06-25 16:55:48,502: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip ospf mpls ldp interface' +++
+show ip ospf mpls ldp interface
+Loopback77
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+GigabitEthernet1/0
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+GigabitEthernet0/3
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+GigabitEthernet0/2
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+GigabitEthernet0/1
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+Spine1#
+
+2025-06-25 16:55:49,058: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip ospf mpls traffic-eng link' +++
+show ip ospf mpls traffic-eng link
+
+            OSPF Router with ID (1.1.1.1) (Process ID 1)
+
+  Area 0 MPLS TE not initialized
+Spine1#
+
+2025-06-25 16:55:49,610: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 1.1.1.1
+Spine1#
+
+2025-06-25 16:55:51,891: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip ospf database router' +++
+show ip ospf database router
+
+            OSPF Router with ID (1.1.1.1) (Process ID 1)
+
+		Router Link States (Area 0)
+
+  LS age: 639
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 1.1.1.1
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000BB
+  Checksum: 0x9090
+  Length: 84
+  Number of Links: 5
+
+    Link connected to: a Stub Network
+     (Link ID) Network/subnet number: 77.77.77.77
+     (Link Data) Network Mask: 255.255.255.255
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.13
+     (Link Data) Router Interface address: 10.0.10.13
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.9
+     (Link Data) Router Interface address: 10.0.10.9
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.5
+     (Link Data) Router Interface address: 10.0.10.5
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.1
+     (Link Data) Router Interface address: 10.0.10.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1801
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 2.2.2.2
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000BA
+  Checksum: 0x30D
+  Length: 72
+  Number of Links: 4
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.13
+     (Link Data) Router Interface address: 10.0.20.13
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.9
+     (Link Data) Router Interface address: 10.0.20.9
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.5
+     (Link Data) Router Interface address: 10.0.20.5
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.1
+     (Link Data) Router Interface address: 10.0.20.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 727
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 3.3.3.3
+  Advertising Router: 3.3.3.3
+  LS Seq Number: 800000B9
+  Checksum: 0x5A8D
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.1
+     (Link Data) Router Interface address: 10.0.20.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.1
+     (Link Data) Router Interface address: 10.0.10.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 24
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 4.4.4.4
+  Advertising Router: 4.4.4.4
+  LS Seq Number: 800000B4
+  Checksum: 0x399B
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.5
+     (Link Data) Router Interface address: 10.0.20.6
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.5
+     (Link Data) Router Interface address: 10.0.10.6
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1396
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 5.5.5.5
+  Advertising Router: 5.5.5.5
+  LS Seq Number: 800000B4
+  Checksum: 0xEAE
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.9
+     (Link Data) Router Interface address: 10.0.20.10
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.9
+     (Link Data) Router Interface address: 10.0.10.10
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 921
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 6.6.6.6
+  Advertising Router: 6.6.6.6
+  LS Seq Number: 800000B7
+  Checksum: 0xDCC4
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.13
+     (Link Data) Router Interface address: 10.0.20.14
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.13
+     (Link Data) Router Interface address: 10.0.10.14
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+Spine1#
+
+2025-06-25 16:55:52,425: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip ospf database network' +++
+show ip ospf database network
+
+            OSPF Router with ID (1.1.1.1) (Process ID 1)
+
+		Net Link States (Area 0)
+
+  LS age: 640
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.1 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 8000005D
+  Checksum: 0x7443
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 3.3.3.3
+
+  LS age: 640
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.5 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xD585
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 4.4.4.4
+
+  LS age: 640
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.9 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xDF73
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 5.5.5.5
+
+  LS age: 640
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.13 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xE961
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 6.6.6.6
+
+  LS age: 276
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.1 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x61EF
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 3.3.3.3
+
+  LS age: 276
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.5 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x6BDD
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 4.4.4.4
+
+  LS age: 276
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.9 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x75CB
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 5.5.5.5
+
+  LS age: 1802
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.13 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B0
+  Checksum: 0x81B8
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 6.6.6.6
+
+Spine1#
+
+2025-06-25 16:55:52,973: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip ospf database external' +++
+show ip ospf database external
+
+            OSPF Router with ID (1.1.1.1) (Process ID 1)
+Spine1#
+
+2025-06-25 16:55:53,499: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip ospf database summary' +++
+show ip ospf database summary
+
+            OSPF Router with ID (1.1.1.1) (Process ID 1)
+Spine1#
+
+2025-06-25 16:55:54,010: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip ospf database opaque-area' +++
+show ip ospf database opaque-area
+
+            OSPF Router with ID (1.1.1.1) (Process ID 1)
+Spine1#
+
+2025-06-25 16:55:54,568: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip ospf virtual-links' +++
+show ip ospf virtual-links
+Spine1#
+
+2025-06-25 16:55:55,070: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip ospf interface' +++
+show ip ospf interface
+Loopback77 is up, line protocol is up 
+  Internet Address 77.77.77.77/32, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 1.1.1.1, Network Type LOOPBACK, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Loopback interface is treated as a stub Host
+GigabitEthernet1/0 is up, line protocol is up (connected) 
+  Internet Address 10.0.10.13/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 1.1.1.1, Interface address 10.0.10.13
+  Backup Designated router (ID) 6.6.6.6, Interface address 10.0.10.14
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:08
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/4/4, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 5
+  Last flood scan time is 0 msec, maximum is 3 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 6.6.6.6  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+GigabitEthernet0/3 is up, line protocol is up (connected) 
+  Internet Address 10.0.10.9/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 1.1.1.1, Interface address 10.0.10.9
+  Backup Designated router (ID) 5.5.5.5, Interface address 10.0.10.10
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:03
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/3/3, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 5
+  Last flood scan time is 0 msec, maximum is 4 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 5.5.5.5  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+GigabitEthernet0/2 is up, line protocol is up (connected) 
+  Internet Address 10.0.10.5/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 1.1.1.1, Interface address 10.0.10.5
+  Backup Designated router (ID) 4.4.4.4, Interface address 10.0.10.6
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:02
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/2/2, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 0, maximum is 5
+  Last flood scan time is 0 msec, maximum is 4 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 4.4.4.4  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+GigabitEthernet0/1 is up, line protocol is up (connected) 
+  Internet Address 10.0.10.1/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 1.1.1.1, Interface address 10.0.10.1
+  Backup Designated router (ID) 3.3.3.3, Interface address 10.0.10.2
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:00
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 5
+  Last flood scan time is 0 msec, maximum is 4 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 3.3.3.3  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+Spine1#
+
+2025-06-25 16:55:55,565: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 1.1.1.1
+Spine1#
+
+2025-06-25 16:55:57,791: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 1.1.1.1
+Spine1#
+
+2025-06-25 16:56:00,108: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 1.1.1.1
+Spine1#
+
+2025-06-25 16:56:02,324: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 1.1.1.1
+Spine1#
+
+2025-06-25 16:56:04,621: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 1.1.1.1
+Spine1#
+
+2025-06-25 16:56:06,985: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip ospf neighbor detail' +++
+show ip ospf neighbor detail
+ Neighbor 6.6.6.6, interface address 10.0.10.14
+    In the area 0 via interface GigabitEthernet1/0
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.10.13 BDR is 10.0.10.14
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:35
+    Neighbor is up for 4d02h   
+    Index 1/4/4, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+ Neighbor 5.5.5.5, interface address 10.0.10.10
+    In the area 0 via interface GigabitEthernet0/3
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.10.9 BDR is 10.0.10.10
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:31
+    Neighbor is up for 4d02h   
+    Index 1/3/3, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+ Neighbor 4.4.4.4, interface address 10.0.10.6
+    In the area 0 via interface GigabitEthernet0/2
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.10.5 BDR is 10.0.10.6
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:33
+    Neighbor is up for 4d02h   
+    Index 1/2/2, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+ Neighbor 3.3.3.3, interface address 10.0.10.2
+    In the area 0 via interface GigabitEthernet0/1
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.10.1 BDR is 10.0.10.2
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:39
+    Neighbor is up for 2d03h   
+    Index 1/1/1, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+Spine1#
+
+2025-06-25 16:56:07,513: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip ospf interface GigabitEthernet1/0' +++
+show ip ospf interface GigabitEthernet1/0
+GigabitEthernet1/0 is up, line protocol is up (connected) 
+  Internet Address 10.0.10.13/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 1.1.1.1, Interface address 10.0.10.13
+  Backup Designated router (ID) 6.6.6.6, Interface address 10.0.10.14
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:05
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/4/4, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 5
+  Last flood scan time is 0 msec, maximum is 3 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 6.6.6.6  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+Spine1#
+
+2025-06-25 16:56:08,193: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 1.1.1.1
+Spine1#
+
+2025-06-25 16:56:10,672: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip ospf interface GigabitEthernet0/3' +++
+show ip ospf interface GigabitEthernet0/3
+GigabitEthernet0/3 is up, line protocol is up (connected) 
+  Internet Address 10.0.10.9/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 1.1.1.1, Interface address 10.0.10.9
+  Backup Designated router (ID) 5.5.5.5, Interface address 10.0.10.10
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:07
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/3/3, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 5
+  Last flood scan time is 0 msec, maximum is 4 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 5.5.5.5  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+Spine1#
+
+2025-06-25 16:56:11,373: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 1.1.1.1
+Spine1#
+
+2025-06-25 16:56:13,712: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip ospf interface GigabitEthernet0/2' +++
+show ip ospf interface GigabitEthernet0/2
+GigabitEthernet0/2 is up, line protocol is up (connected) 
+  Internet Address 10.0.10.5/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 1.1.1.1, Interface address 10.0.10.5
+  Backup Designated router (ID) 4.4.4.4, Interface address 10.0.10.6
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:03
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/2/2, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 0, maximum is 5
+  Last flood scan time is 0 msec, maximum is 4 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 4.4.4.4  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+Spine1#
+
+2025-06-25 16:56:14,311: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 1.1.1.1
+Spine1#
+
+2025-06-25 16:56:16,700: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip ospf interface GigabitEthernet0/1' +++
+show ip ospf interface GigabitEthernet0/1
+GigabitEthernet0/1 is up, line protocol is up (connected) 
+  Internet Address 10.0.10.1/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 1.1.1.1, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 1.1.1.1, Interface address 10.0.10.1
+  Backup Designated router (ID) 3.3.3.3, Interface address 10.0.10.2
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:07
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 5
+  Last flood scan time is 0 msec, maximum is 4 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 3.3.3.3  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+Spine1#
+
+2025-06-25 16:56:17,313: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 1.1.1.1
+Spine1#
+
+2025-06-25 16:56:19,630: %UNICON-INFO: +++ Spine1 with via 'cli': executing command 'show ip ospf sham-links' +++
+show ip ospf sham-links
+Spine1#</msg>
+<msg time="2025-06-25T16:56:19.955055" level="INFO">/Users/dylan/personal_projects/cbtn-advanced-net-automation/.venv/lib/python3.11/site-packages/genie/abstract/magic.py:337: UserWarning: Abstract values defined under "custom" for device Spine1
+  warnings.warn('Abstract values defined under "custom" for '</msg>
+<doc>Verify that a specific number of &lt;...&gt; is &lt;...&gt; on a device.</doc>
+<status status="PASS" start="2025-06-25T16:55:44.146816" elapsed="35.808280"/>
+</kw>
+<kw name="verify count &quot;4&quot; &quot;ospf neighbors&quot; on device &quot;Spine2&quot;" owner="genie.libs.robot.GenieRobot" source_name="verify count &quot;${number:[^&quot;]+}&quot; &quot;${structure:[^&quot;]+}&quot; on device &quot;${device:[^&quot;]+}&quot;">
+<msg time="2025-06-25T16:56:30.179996" level="INFO">Could not learn &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfVirtualLinks'&gt; on &lt;unicon.plugins.iosxe.IosXESingleRpConnection object at 0x11d439150&gt;
+Show Command: show ip ospf virtual-links
+Parser Output is empty</msg>
+<msg time="2025-06-25T16:56:52.113616" level="INFO">Could not learn &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfShamLinks'&gt; on &lt;unicon.plugins.iosxe.IosXESingleRpConnection object at 0x11d439150&gt;
+Show Command: show ip ospf sham-links
+Parser Output is empty</msg>
+<msg time="2025-06-25T16:56:52.114441" level="INFO">+====================================================================================================================================================+</msg>
+<msg time="2025-06-25T16:56:52.114516" level="INFO">| Commands for learning feature 'Ospf'                                                                                                               |</msg>
+<msg time="2025-06-25T16:56:52.114576" level="INFO">+====================================================================================================================================================+</msg>
+<msg time="2025-06-25T16:56:52.114635" level="INFO">| - Parsed commands                                                                                                                                  |</msg>
+<msg time="2025-06-25T16:56:52.114690" level="INFO">|----------------------------------------------------------------------------------------------------------------------------------------------------|</msg>
+<msg time="2025-06-25T16:56:52.114743" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspf'&gt;                                                                                      |</msg>
+<msg time="2025-06-25T16:56:52.114799" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_protocols.ShowIpProtocols'&gt;, arguments: {'vrf':''}                                                     |</msg>
+<msg time="2025-06-25T16:56:52.114850" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfMplsLdpInterface'&gt;, arguments: {'interface':''}                                         |</msg>
+<msg time="2025-06-25T16:56:52.114903" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfMplsTrafficEngLink'&gt;                                                                    |</msg>
+<msg time="2025-06-25T16:56:52.114958" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseRouter'&gt;                                                               |</msg>
+<msg time="2025-06-25T16:56:52.115016" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseNetwork'&gt;                                                              |</msg>
+<msg time="2025-06-25T16:56:52.115072" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseExternal'&gt;                                                             |</msg>
+<msg time="2025-06-25T16:56:52.115125" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseSummary'&gt;                                                              |</msg>
+<msg time="2025-06-25T16:56:52.115176" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseOpaqueArea'&gt;                                                           |</msg>
+<msg time="2025-06-25T16:56:52.115232" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfInterface'&gt;, arguments: {'interface':''}                                                |</msg>
+<msg time="2025-06-25T16:56:52.115286" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfNeighborDetail'&gt;, arguments: {'neighbor':''}                                            |</msg>
+<msg time="2025-06-25T16:56:52.115337" level="INFO">|====================================================================================================================================================|</msg>
+<msg time="2025-06-25T16:56:52.115389" level="INFO">| - Commands with empty output                                                                                                                       |</msg>
+<msg time="2025-06-25T16:56:52.115442" level="INFO">|----------------------------------------------------------------------------------------------------------------------------------------------------|</msg>
+<msg time="2025-06-25T16:56:52.115492" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfVirtualLinks'&gt;                                                                          |</msg>
+<msg time="2025-06-25T16:56:52.115554" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfShamLinks'&gt;                                                                             |</msg>
+<msg time="2025-06-25T16:56:52.115596" level="INFO">|====================================================================================================================================================|</msg>
+<msg time="2025-06-25T16:56:52.211314" level="INFO">2025-06-25 16:56:20,315: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip ospf' +++
+show ip ospf
+ Routing Process "ospf 1" with ID 2.2.2.2
+ Start time: 00:09:28.043, Time elapsed: 4d02h
+ Supports only single TOS(TOS0) routes
+ Supports opaque LSA
+ Supports Link-local Signaling (LLS)
+ Supports area transit capability
+ Supports NSSA (compatible with RFC 3101)
+ Does not support Database Exchange Summary List Optimization (RFC 5243)
+ Event-log enabled, Maximum number of events: 1000, Mode: cyclic
+ Router is not originating router-LSAs with maximum metric
+ Initial SPF schedule delay 5000 msecs
+ Minimum hold time between two consecutive SPFs 10000 msecs
+ Maximum wait time between two consecutive SPFs 10000 msecs
+ Incremental-SPF disabled
+ Minimum LSA interval 5 secs
+ Minimum LSA arrival 1000 msecs
+ LSA group pacing timer 240 secs
+ Interface flood pacing timer 33 msecs
+ Retransmission pacing timer 66 msecs
+ Number of external LSA 0. Checksum Sum 0x000000
+ Number of opaque AS LSA 0. Checksum Sum 0x000000
+ Number of DCbitless external and opaque AS LSA 0
+ Number of DoNotAge external and opaque AS LSA 0
+ Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+ Number of areas transit capable is 0
+ External flood list length 0
+ IETF NSF helper support enabled
+ Cisco NSF helper support enabled
+ Reference bandwidth unit is 100 mbps
+    Area BACKBONE(0)
+        Number of interfaces in this area is 4
+	Area has no authentication
+	SPF algorithm last executed 2d03h ago
+	SPF algorithm executed 17 times
+	Area ranges are
+	Number of LSA 14. Checksum Sum 0x06EB22
+	Number of opaque link LSA 0. Checksum Sum 0x000000
+	Number of DCbitless LSA 0
+	Number of indication LSA 0
+	Number of DoNotAge LSA 0
+	Flood list length 0
+
+Spine2#
+
+2025-06-25 16:56:20,784: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip protocols' +++
+show ip protocols
+*** IP Routing is NSF aware ***
+
+Routing Protocol is "application"
+  Sending updates every 0 seconds
+  Invalid after 0 seconds, hold down 0, flushed after 0
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Maximum path: 32
+  Routing for Networks:
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+  Distance: (default is 4)
+
+Routing Protocol is "ospf 1"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Router ID 2.2.2.2
+  Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+  Routing on Interfaces Configured Explicitly (Area 0):
+    GigabitEthernet1/0
+    GigabitEthernet0/3
+    GigabitEthernet0/2
+    GigabitEthernet0/1
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+    5.5.5.5              110      4d02h
+    4.4.4.4              110      4d02h
+    1.1.1.1              110      2d03h
+  Distance: (default is 110)
+
+Spine2#
+
+2025-06-25 16:56:21,279: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 2.2.2.2
+Spine2#
+
+2025-06-25 16:56:23,703: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip ospf mpls ldp interface' +++
+show ip ospf mpls ldp interface
+GigabitEthernet1/0
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+GigabitEthernet0/3
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+GigabitEthernet0/2
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+GigabitEthernet0/1
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+Spine2#
+
+2025-06-25 16:56:24,238: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip ospf mpls traffic-eng link' +++
+show ip ospf mpls traffic-eng link
+
+            OSPF Router with ID (2.2.2.2) (Process ID 1)
+
+  Area 0 MPLS TE not initialized
+Spine2#
+
+2025-06-25 16:56:24,844: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 2.2.2.2
+Spine2#
+
+2025-06-25 16:56:27,050: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip ospf database router' +++
+show ip ospf database router
+
+            OSPF Router with ID (2.2.2.2) (Process ID 1)
+
+		Router Link States (Area 0)
+
+  LS age: 677
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 1.1.1.1
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000BB
+  Checksum: 0x9090
+  Length: 84
+  Number of Links: 5
+
+    Link connected to: a Stub Network
+     (Link ID) Network/subnet number: 77.77.77.77
+     (Link Data) Network Mask: 255.255.255.255
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.13
+     (Link Data) Router Interface address: 10.0.10.13
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.9
+     (Link Data) Router Interface address: 10.0.10.9
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.5
+     (Link Data) Router Interface address: 10.0.10.5
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.1
+     (Link Data) Router Interface address: 10.0.10.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1835
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 2.2.2.2
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000BA
+  Checksum: 0x30D
+  Length: 72
+  Number of Links: 4
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.13
+     (Link Data) Router Interface address: 10.0.20.13
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.9
+     (Link Data) Router Interface address: 10.0.20.9
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.5
+     (Link Data) Router Interface address: 10.0.20.5
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.1
+     (Link Data) Router Interface address: 10.0.20.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 763
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 3.3.3.3
+  Advertising Router: 3.3.3.3
+  LS Seq Number: 800000B9
+  Checksum: 0x5A8D
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.1
+     (Link Data) Router Interface address: 10.0.20.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.1
+     (Link Data) Router Interface address: 10.0.10.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 59
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 4.4.4.4
+  Advertising Router: 4.4.4.4
+  LS Seq Number: 800000B4
+  Checksum: 0x399B
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.5
+     (Link Data) Router Interface address: 10.0.20.6
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.5
+     (Link Data) Router Interface address: 10.0.10.6
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1432
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 5.5.5.5
+  Advertising Router: 5.5.5.5
+  LS Seq Number: 800000B4
+  Checksum: 0xEAE
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.9
+     (Link Data) Router Interface address: 10.0.20.10
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.9
+     (Link Data) Router Interface address: 10.0.10.10
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 958
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 6.6.6.6
+  Advertising Router: 6.6.6.6
+  LS Seq Number: 800000B7
+  Checksum: 0xDCC4
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.13
+     (Link Data) Router Interface address: 10.0.20.14
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.13
+     (Link Data) Router Interface address: 10.0.10.14
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+Spine2#
+
+2025-06-25 16:56:27,609: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip ospf database network' +++
+show ip ospf database network
+
+            OSPF Router with ID (2.2.2.2) (Process ID 1)
+
+		Net Link States (Area 0)
+
+  LS age: 678
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.1 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 8000005D
+  Checksum: 0x7443
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 3.3.3.3
+
+  LS age: 678
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.5 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xD585
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 4.4.4.4
+
+  LS age: 678
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.9 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xDF73
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 5.5.5.5
+
+  LS age: 678
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.13 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xE961
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 6.6.6.6
+
+  LS age: 309
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.1 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x61EF
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 3.3.3.3
+
+  LS age: 309
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.5 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x6BDD
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 4.4.4.4
+
+  LS age: 309
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.9 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x75CB
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 5.5.5.5
+
+  LS age: 1836
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.13 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B0
+  Checksum: 0x81B8
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 6.6.6.6
+
+Spine2#
+
+2025-06-25 16:56:28,161: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip ospf database external' +++
+show ip ospf database external
+
+            OSPF Router with ID (2.2.2.2) (Process ID 1)
+Spine2#
+
+2025-06-25 16:56:28,698: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip ospf database summary' +++
+show ip ospf database summary
+
+            OSPF Router with ID (2.2.2.2) (Process ID 1)
+Spine2#
+
+2025-06-25 16:56:29,393: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip ospf database opaque-area' +++
+show ip ospf database opaque-area
+
+            OSPF Router with ID (2.2.2.2) (Process ID 1)
+Spine2#
+
+2025-06-25 16:56:29,902: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip ospf virtual-links' +++
+show ip ospf virtual-links
+Spine2#
+
+2025-06-25 16:56:30,418: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip ospf interface' +++
+show ip ospf interface
+GigabitEthernet1/0 is up, line protocol is up (connected) 
+  Internet Address 10.0.20.13/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 2.2.2.2, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 2.2.2.2, Interface address 10.0.20.13
+  Backup Designated router (ID) 6.6.6.6, Interface address 10.0.20.14
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:03
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/4/4, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 5
+  Last flood scan time is 0 msec, maximum is 3 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 6.6.6.6  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+GigabitEthernet0/3 is up, line protocol is up (connected) 
+  Internet Address 10.0.20.9/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 2.2.2.2, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 2.2.2.2, Interface address 10.0.20.9
+  Backup Designated router (ID) 5.5.5.5, Interface address 10.0.20.10
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:05
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/3/3, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 5
+  Last flood scan time is 0 msec, maximum is 2 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 5.5.5.5  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+GigabitEthernet0/2 is up, line protocol is up (connected) 
+  Internet Address 10.0.20.5/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 2.2.2.2, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 2.2.2.2, Interface address 10.0.20.5
+  Backup Designated router (ID) 4.4.4.4, Interface address 10.0.20.6
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:03
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/2/2, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 0, maximum is 5
+  Last flood scan time is 0 msec, maximum is 1 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 4.4.4.4  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+GigabitEthernet0/1 is up, line protocol is up (connected) 
+  Internet Address 10.0.20.1/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 2.2.2.2, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 2.2.2.2, Interface address 10.0.20.1
+  Backup Designated router (ID) 3.3.3.3, Interface address 10.0.20.2
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:07
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 5
+  Last flood scan time is 0 msec, maximum is 1 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 3.3.3.3  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+Spine2#
+
+2025-06-25 16:56:30,985: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 2.2.2.2
+Spine2#
+
+2025-06-25 16:56:33,191: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 2.2.2.2
+Spine2#
+
+2025-06-25 16:56:35,368: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 2.2.2.2
+Spine2#
+
+2025-06-25 16:56:37,601: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 2.2.2.2
+Spine2#
+
+2025-06-25 16:56:39,865: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip ospf neighbor detail' +++
+show ip ospf neighbor detail
+ Neighbor 6.6.6.6, interface address 10.0.20.14
+    In the area 0 via interface GigabitEthernet1/0
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.20.13 BDR is 10.0.20.14
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:31
+    Neighbor is up for 4d02h   
+    Index 1/4/4, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+ Neighbor 5.5.5.5, interface address 10.0.20.10
+    In the area 0 via interface GigabitEthernet0/3
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.20.9 BDR is 10.0.20.10
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:35
+    Neighbor is up for 4d02h   
+    Index 1/3/3, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+ Neighbor 4.4.4.4, interface address 10.0.20.6
+    In the area 0 via interface GigabitEthernet0/2
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.20.5 BDR is 10.0.20.6
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:34
+    Neighbor is up for 4d02h   
+    Index 1/2/2, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+ Neighbor 3.3.3.3, interface address 10.0.20.2
+    In the area 0 via interface GigabitEthernet0/1
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.20.1 BDR is 10.0.20.2
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:32
+    Neighbor is up for 4d02h   
+    Index 1/1/1, retransmission queue length 0, number of retransmission 1
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 1, maximum is 1
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+Spine2#
+
+2025-06-25 16:56:40,399: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip ospf interface GigabitEthernet1/0' +++
+show ip ospf interface GigabitEthernet1/0
+GigabitEthernet1/0 is up, line protocol is up (connected) 
+  Internet Address 10.0.20.13/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 2.2.2.2, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 2.2.2.2, Interface address 10.0.20.13
+  Backup Designated router (ID) 6.6.6.6, Interface address 10.0.20.14
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:02
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/4/4, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 5
+  Last flood scan time is 0 msec, maximum is 3 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 6.6.6.6  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+Spine2#
+
+2025-06-25 16:56:41,011: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 2.2.2.2
+Spine2#
+
+2025-06-25 16:56:43,237: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip ospf interface GigabitEthernet0/3' +++
+show ip ospf interface GigabitEthernet0/3
+GigabitEthernet0/3 is up, line protocol is up (connected) 
+  Internet Address 10.0.20.9/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 2.2.2.2, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 2.2.2.2, Interface address 10.0.20.9
+  Backup Designated router (ID) 5.5.5.5, Interface address 10.0.20.10
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:01
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/3/3, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 5
+  Last flood scan time is 0 msec, maximum is 2 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 5.5.5.5  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+Spine2#
+
+2025-06-25 16:56:43,863: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 2.2.2.2
+Spine2#
+
+2025-06-25 16:56:46,105: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip ospf interface GigabitEthernet0/2' +++
+show ip ospf interface GigabitEthernet0/2
+GigabitEthernet0/2 is up, line protocol is up (connected) 
+  Internet Address 10.0.20.5/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 2.2.2.2, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 2.2.2.2, Interface address 10.0.20.5
+  Backup Designated router (ID) 4.4.4.4, Interface address 10.0.20.6
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:07
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/2/2, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 0, maximum is 5
+  Last flood scan time is 0 msec, maximum is 1 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 4.4.4.4  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+Spine2#
+
+2025-06-25 16:56:46,726: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 2.2.2.2
+Spine2#
+
+2025-06-25 16:56:48,901: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip ospf interface GigabitEthernet0/1' +++
+show ip ospf interface GigabitEthernet0/1
+GigabitEthernet0/1 is up, line protocol is up (connected) 
+  Internet Address 10.0.20.1/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 2.2.2.2, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 2.2.2.2, Interface address 10.0.20.1
+  Backup Designated router (ID) 3.3.3.3, Interface address 10.0.20.2
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:08
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 5
+  Last flood scan time is 0 msec, maximum is 1 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 3.3.3.3  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+Spine2#
+
+2025-06-25 16:56:49,538: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 2.2.2.2
+Spine2#
+
+2025-06-25 16:56:51,864: %UNICON-INFO: +++ Spine2 with via 'cli': executing command 'show ip ospf sham-links' +++
+show ip ospf sham-links
+Spine2#</msg>
+<msg time="2025-06-25T16:56:52.211509" level="INFO">/Users/dylan/personal_projects/cbtn-advanced-net-automation/.venv/lib/python3.11/site-packages/genie/abstract/magic.py:337: UserWarning: Abstract values defined under "custom" for device Spine2
+  warnings.warn('Abstract values defined under "custom" for '</msg>
+<doc>Verify that a specific number of &lt;...&gt; is &lt;...&gt; on a device.</doc>
+<status status="PASS" start="2025-06-25T16:56:19.955341" elapsed="32.256207"/>
+</kw>
+<kw name="verify count &quot;2&quot; &quot;ospf neighbors&quot; on device &quot;Leaf1&quot;" owner="genie.libs.robot.GenieRobot" source_name="verify count &quot;${number:[^&quot;]+}&quot; &quot;${structure:[^&quot;]+}&quot; on device &quot;${device:[^&quot;]+}&quot;">
+<msg time="2025-06-25T16:57:02.053630" level="INFO">Could not learn &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfVirtualLinks'&gt; on &lt;unicon.plugins.iosxe.IosXESingleRpConnection object at 0x10f472050&gt;
+Show Command: show ip ospf virtual-links
+Parser Output is empty</msg>
+<msg time="2025-06-25T16:57:13.174596" level="INFO">Could not learn &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfShamLinks'&gt; on &lt;unicon.plugins.iosxe.IosXESingleRpConnection object at 0x10f472050&gt;
+Show Command: show ip ospf sham-links
+Parser Output is empty</msg>
+<msg time="2025-06-25T16:57:13.175242" level="INFO">+====================================================================================================================================================+</msg>
+<msg time="2025-06-25T16:57:13.175299" level="INFO">| Commands for learning feature 'Ospf'                                                                                                               |</msg>
+<msg time="2025-06-25T16:57:13.175340" level="INFO">+====================================================================================================================================================+</msg>
+<msg time="2025-06-25T16:57:13.175379" level="INFO">| - Parsed commands                                                                                                                                  |</msg>
+<msg time="2025-06-25T16:57:13.175412" level="INFO">|----------------------------------------------------------------------------------------------------------------------------------------------------|</msg>
+<msg time="2025-06-25T16:57:13.175447" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspf'&gt;                                                                                      |</msg>
+<msg time="2025-06-25T16:57:13.175483" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_protocols.ShowIpProtocols'&gt;, arguments: {'vrf':''}                                                     |</msg>
+<msg time="2025-06-25T16:57:13.175514" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfMplsLdpInterface'&gt;, arguments: {'interface':''}                                         |</msg>
+<msg time="2025-06-25T16:57:13.175550" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfMplsTrafficEngLink'&gt;                                                                    |</msg>
+<msg time="2025-06-25T16:57:13.175581" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseRouter'&gt;                                                               |</msg>
+<msg time="2025-06-25T16:57:13.175612" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseNetwork'&gt;                                                              |</msg>
+<msg time="2025-06-25T16:57:13.175644" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseExternal'&gt;                                                             |</msg>
+<msg time="2025-06-25T16:57:13.175676" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseSummary'&gt;                                                              |</msg>
+<msg time="2025-06-25T16:57:13.175708" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseOpaqueArea'&gt;                                                           |</msg>
+<msg time="2025-06-25T16:57:13.175743" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfInterface'&gt;, arguments: {'interface':''}                                                |</msg>
+<msg time="2025-06-25T16:57:13.175780" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfNeighborDetail'&gt;, arguments: {'neighbor':''}                                            |</msg>
+<msg time="2025-06-25T16:57:13.175812" level="INFO">|====================================================================================================================================================|</msg>
+<msg time="2025-06-25T16:57:13.175844" level="INFO">| - Commands with empty output                                                                                                                       |</msg>
+<msg time="2025-06-25T16:57:13.175876" level="INFO">|----------------------------------------------------------------------------------------------------------------------------------------------------|</msg>
+<msg time="2025-06-25T16:57:13.175905" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfVirtualLinks'&gt;                                                                          |</msg>
+<msg time="2025-06-25T16:57:13.175932" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfShamLinks'&gt;                                                                             |</msg>
+<msg time="2025-06-25T16:57:13.175959" level="INFO">|====================================================================================================================================================|</msg>
+<msg time="2025-06-25T16:57:13.241845" level="INFO">2025-06-25 16:56:52,553: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show ip ospf' +++
+show ip ospf
+ Routing Process "ospf 1" with ID 3.3.3.3
+ Start time: 00:11:02.970, Time elapsed: 4d02h
+ Supports only single TOS(TOS0) routes
+ Supports opaque LSA
+ Supports Link-local Signaling (LLS)
+ Supports area transit capability
+ Supports NSSA (compatible with RFC 3101)
+ Does not support Database Exchange Summary List Optimization (RFC 5243)
+ Event-log enabled, Maximum number of events: 1000, Mode: cyclic
+ Router is not originating router-LSAs with maximum metric
+ Initial SPF schedule delay 5000 msecs
+ Minimum hold time between two consecutive SPFs 10000 msecs
+ Maximum wait time between two consecutive SPFs 10000 msecs
+ Incremental-SPF disabled
+ Minimum LSA interval 5 secs
+ Minimum LSA arrival 1000 msecs
+ LSA group pacing timer 240 secs
+ Interface flood pacing timer 33 msecs
+ Retransmission pacing timer 66 msecs
+ Number of external LSA 0. Checksum Sum 0x000000
+ Number of opaque AS LSA 0. Checksum Sum 0x000000
+ Number of DCbitless external and opaque AS LSA 0
+ Number of DoNotAge external and opaque AS LSA 0
+ Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+ Number of areas transit capable is 0
+ External flood list length 0
+ IETF NSF helper support enabled
+ Cisco NSF helper support enabled
+ Reference bandwidth unit is 100 mbps
+    Area BACKBONE(0)
+        Number of interfaces in this area is 2
+	Area has no authentication
+	SPF algorithm last executed 2d03h ago
+	SPF algorithm executed 17 times
+	Area ranges are
+	Number of LSA 14. Checksum Sum 0x06EB22
+	Number of opaque link LSA 0. Checksum Sum 0x000000
+	Number of DCbitless LSA 0
+	Number of indication LSA 0
+	Number of DoNotAge LSA 0
+	Flood list length 0
+
+Leaf1#
+
+2025-06-25 16:56:53,009: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show ip protocols' +++
+show ip protocols
+*** IP Routing is NSF aware ***
+
+Routing Protocol is "application"
+  Sending updates every 0 seconds
+  Invalid after 0 seconds, hold down 0, flushed after 0
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Maximum path: 32
+  Routing for Networks:
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+  Distance: (default is 4)
+
+Routing Protocol is "ospf 1"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Router ID 3.3.3.3
+  Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+  Routing on Interfaces Configured Explicitly (Area 0):
+    GigabitEthernet0/2
+    GigabitEthernet0/1
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+    1.1.1.1              110      2d03h
+    2.2.2.2              110      4d02h
+  Distance: (default is 110)
+
+Leaf1#
+
+2025-06-25 16:56:53,490: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 3.3.3.3
+Leaf1#
+
+2025-06-25 16:56:55,622: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show ip ospf mpls ldp interface' +++
+show ip ospf mpls ldp interface
+GigabitEthernet0/2
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+GigabitEthernet0/1
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+Leaf1#
+
+2025-06-25 16:56:56,211: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show ip ospf mpls traffic-eng link' +++
+show ip ospf mpls traffic-eng link
+
+            OSPF Router with ID (3.3.3.3) (Process ID 1)
+
+  Area 0 MPLS TE not initialized
+Leaf1#
+
+2025-06-25 16:56:56,822: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 3.3.3.3
+Leaf1#
+
+2025-06-25 16:56:59,031: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show ip ospf database router' +++
+show ip ospf database router
+
+            OSPF Router with ID (3.3.3.3) (Process ID 1)
+
+		Router Link States (Area 0)
+
+  LS age: 708
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 1.1.1.1
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000BB
+  Checksum: 0x9090
+  Length: 84
+  Number of Links: 5
+
+    Link connected to: a Stub Network
+     (Link ID) Network/subnet number: 77.77.77.77
+     (Link Data) Network Mask: 255.255.255.255
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.13
+     (Link Data) Router Interface address: 10.0.10.13
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.9
+     (Link Data) Router Interface address: 10.0.10.9
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.5
+     (Link Data) Router Interface address: 10.0.10.5
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.1
+     (Link Data) Router Interface address: 10.0.10.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1867
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 2.2.2.2
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000BA
+  Checksum: 0x30D
+  Length: 72
+  Number of Links: 4
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.13
+     (Link Data) Router Interface address: 10.0.20.13
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.9
+     (Link Data) Router Interface address: 10.0.20.9
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.5
+     (Link Data) Router Interface address: 10.0.20.5
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.1
+     (Link Data) Router Interface address: 10.0.20.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 793
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 3.3.3.3
+  Advertising Router: 3.3.3.3
+  LS Seq Number: 800000B9
+  Checksum: 0x5A8D
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.1
+     (Link Data) Router Interface address: 10.0.20.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.1
+     (Link Data) Router Interface address: 10.0.10.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 92
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 4.4.4.4
+  Advertising Router: 4.4.4.4
+  LS Seq Number: 800000B4
+  Checksum: 0x399B
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.5
+     (Link Data) Router Interface address: 10.0.20.6
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.5
+     (Link Data) Router Interface address: 10.0.10.6
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1465
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 5.5.5.5
+  Advertising Router: 5.5.5.5
+  LS Seq Number: 800000B4
+  Checksum: 0xEAE
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.9
+     (Link Data) Router Interface address: 10.0.20.10
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.9
+     (Link Data) Router Interface address: 10.0.10.10
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 990
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 6.6.6.6
+  Advertising Router: 6.6.6.6
+  LS Seq Number: 800000B7
+  Checksum: 0xDCC4
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.13
+     (Link Data) Router Interface address: 10.0.20.14
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.13
+     (Link Data) Router Interface address: 10.0.10.14
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+Leaf1#
+
+2025-06-25 16:56:59,596: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show ip ospf database network' +++
+show ip ospf database network
+
+            OSPF Router with ID (3.3.3.3) (Process ID 1)
+
+		Net Link States (Area 0)
+
+  LS age: 708
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.1 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 8000005D
+  Checksum: 0x7443
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 3.3.3.3
+
+  LS age: 708
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.5 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xD585
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 4.4.4.4
+
+  LS age: 708
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.9 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xDF73
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 5.5.5.5
+
+  LS age: 708
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.13 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xE961
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 6.6.6.6
+
+  LS age: 341
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.1 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x61EF
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 3.3.3.3
+
+  LS age: 341
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.5 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x6BDD
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 4.4.4.4
+
+  LS age: 341
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.9 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x75CB
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 5.5.5.5
+
+  LS age: 1868
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.13 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B0
+  Checksum: 0x81B8
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 6.6.6.6
+
+Leaf1#
+
+2025-06-25 16:57:00,138: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show ip ospf database external' +++
+show ip ospf database external
+
+            OSPF Router with ID (3.3.3.3) (Process ID 1)
+Leaf1#
+
+2025-06-25 16:57:00,675: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show ip ospf database summary' +++
+show ip ospf database summary
+
+            OSPF Router with ID (3.3.3.3) (Process ID 1)
+Leaf1#
+
+2025-06-25 16:57:01,250: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show ip ospf database opaque-area' +++
+show ip ospf database opaque-area
+
+            OSPF Router with ID (3.3.3.3) (Process ID 1)
+Leaf1#
+
+2025-06-25 16:57:01,751: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show ip ospf virtual-links' +++
+show ip ospf virtual-links
+Leaf1#
+
+2025-06-25 16:57:02,235: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show ip ospf interface' +++
+show ip ospf interface
+GigabitEthernet0/2 is up, line protocol is up (connected) 
+  Internet Address 10.0.20.2/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 3.3.3.3, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 2.2.2.2, Interface address 10.0.20.1
+  Backup Designated router (ID) 3.3.3.3, Interface address 10.0.20.2
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:08
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/2/2, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 5, maximum is 5
+  Last flood scan time is 0 msec, maximum is 1 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 2.2.2.2  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+GigabitEthernet0/1 is up, line protocol is up (connected) 
+  Internet Address 10.0.10.2/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 3.3.3.3, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 1.1.1.1, Interface address 10.0.10.1
+  Backup Designated router (ID) 3.3.3.3, Interface address 10.0.10.2
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:03
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 3
+  Last flood scan time is 0 msec, maximum is 3 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 1.1.1.1  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+Leaf1#
+
+2025-06-25 16:57:02,766: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 3.3.3.3
+Leaf1#
+
+2025-06-25 16:57:04,838: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 3.3.3.3
+Leaf1#
+
+2025-06-25 16:57:06,916: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show ip ospf neighbor detail' +++
+show ip ospf neighbor detail
+ Neighbor 2.2.2.2, interface address 10.0.20.1
+    In the area 0 via interface GigabitEthernet0/2
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.20.1 BDR is 10.0.20.2
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:31
+    Neighbor is up for 4d02h   
+    Index 1/2/2, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+ Neighbor 1.1.1.1, interface address 10.0.10.1
+    In the area 0 via interface GigabitEthernet0/1
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.10.1 BDR is 10.0.10.2
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:35
+    Neighbor is up for 2d03h   
+    Index 1/1/1, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+Leaf1#
+
+2025-06-25 16:57:07,473: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show ip ospf interface GigabitEthernet0/2' +++
+show ip ospf interface GigabitEthernet0/2
+GigabitEthernet0/2 is up, line protocol is up (connected) 
+  Internet Address 10.0.20.2/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 3.3.3.3, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 2.2.2.2, Interface address 10.0.20.1
+  Backup Designated router (ID) 3.3.3.3, Interface address 10.0.20.2
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:03
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/2/2, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 5, maximum is 5
+  Last flood scan time is 0 msec, maximum is 1 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 2.2.2.2  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+Leaf1#
+
+2025-06-25 16:57:08,062: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 3.3.3.3
+Leaf1#
+
+2025-06-25 16:57:10,176: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show ip ospf interface GigabitEthernet0/1' +++
+show ip ospf interface GigabitEthernet0/1
+GigabitEthernet0/1 is up, line protocol is up (connected) 
+  Internet Address 10.0.10.2/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 3.3.3.3, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 1.1.1.1, Interface address 10.0.10.1
+  Backup Designated router (ID) 3.3.3.3, Interface address 10.0.10.2
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:04
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 3
+  Last flood scan time is 0 msec, maximum is 3 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 1.1.1.1  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+Leaf1#
+
+2025-06-25 16:57:10,788: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 3.3.3.3
+Leaf1#
+
+2025-06-25 16:57:12,906: %UNICON-INFO: +++ Leaf1 with via 'cli': executing command 'show ip ospf sham-links' +++
+show ip ospf sham-links
+Leaf1#</msg>
+<msg time="2025-06-25T16:57:13.242012" level="INFO">/Users/dylan/personal_projects/cbtn-advanced-net-automation/.venv/lib/python3.11/site-packages/genie/abstract/magic.py:337: UserWarning: Abstract values defined under "custom" for device Leaf1
+  warnings.warn('Abstract values defined under "custom" for '</msg>
+<doc>Verify that a specific number of &lt;...&gt; is &lt;...&gt; on a device.</doc>
+<status status="PASS" start="2025-06-25T16:56:52.211768" elapsed="21.030281"/>
+</kw>
+<kw name="verify count &quot;2&quot; &quot;ospf neighbors&quot; on device &quot;Leaf2&quot;" owner="genie.libs.robot.GenieRobot" source_name="verify count &quot;${number:[^&quot;]+}&quot; &quot;${structure:[^&quot;]+}&quot; on device &quot;${device:[^&quot;]+}&quot;">
+<msg time="2025-06-25T16:57:22.793483" level="INFO">Could not learn &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfVirtualLinks'&gt; on &lt;unicon.plugins.iosxe.IosXESingleRpConnection object at 0x11d56ae90&gt;
+Show Command: show ip ospf virtual-links
+Parser Output is empty</msg>
+<msg time="2025-06-25T16:57:34.353442" level="INFO">Could not learn &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfShamLinks'&gt; on &lt;unicon.plugins.iosxe.IosXESingleRpConnection object at 0x11d56ae90&gt;
+Show Command: show ip ospf sham-links
+Parser Output is empty</msg>
+<msg time="2025-06-25T16:57:34.354510" level="INFO">+====================================================================================================================================================+</msg>
+<msg time="2025-06-25T16:57:34.354610" level="INFO">| Commands for learning feature 'Ospf'                                                                                                               |</msg>
+<msg time="2025-06-25T16:57:34.354693" level="INFO">+====================================================================================================================================================+</msg>
+<msg time="2025-06-25T16:57:34.354773" level="INFO">| - Parsed commands                                                                                                                                  |</msg>
+<msg time="2025-06-25T16:57:34.354855" level="INFO">|----------------------------------------------------------------------------------------------------------------------------------------------------|</msg>
+<msg time="2025-06-25T16:57:34.354930" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspf'&gt;                                                                                      |</msg>
+<msg time="2025-06-25T16:57:34.355006" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_protocols.ShowIpProtocols'&gt;, arguments: {'vrf':''}                                                     |</msg>
+<msg time="2025-06-25T16:57:34.355080" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfMplsLdpInterface'&gt;, arguments: {'interface':''}                                         |</msg>
+<msg time="2025-06-25T16:57:34.355156" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfMplsTrafficEngLink'&gt;                                                                    |</msg>
+<msg time="2025-06-25T16:57:34.355238" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseRouter'&gt;                                                               |</msg>
+<msg time="2025-06-25T16:57:34.355314" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseNetwork'&gt;                                                              |</msg>
+<msg time="2025-06-25T16:57:34.355396" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseExternal'&gt;                                                             |</msg>
+<msg time="2025-06-25T16:57:34.355467" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseSummary'&gt;                                                              |</msg>
+<msg time="2025-06-25T16:57:34.355543" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseOpaqueArea'&gt;                                                           |</msg>
+<msg time="2025-06-25T16:57:34.355623" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfInterface'&gt;, arguments: {'interface':''}                                                |</msg>
+<msg time="2025-06-25T16:57:34.355694" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfNeighborDetail'&gt;, arguments: {'neighbor':''}                                            |</msg>
+<msg time="2025-06-25T16:57:34.355763" level="INFO">|====================================================================================================================================================|</msg>
+<msg time="2025-06-25T16:57:34.355831" level="INFO">| - Commands with empty output                                                                                                                       |</msg>
+<msg time="2025-06-25T16:57:34.355899" level="INFO">|----------------------------------------------------------------------------------------------------------------------------------------------------|</msg>
+<msg time="2025-06-25T16:57:34.355967" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfVirtualLinks'&gt;                                                                          |</msg>
+<msg time="2025-06-25T16:57:34.356037" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfShamLinks'&gt;                                                                             |</msg>
+<msg time="2025-06-25T16:57:34.356106" level="INFO">|====================================================================================================================================================|</msg>
+<msg time="2025-06-25T16:57:34.430009" level="INFO">2025-06-25 16:57:13,585: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show ip ospf' +++
+show ip ospf
+ Routing Process "ospf 1" with ID 4.4.4.4
+ Start time: 00:11:49.621, Time elapsed: 4d02h
+ Supports only single TOS(TOS0) routes
+ Supports opaque LSA
+ Supports Link-local Signaling (LLS)
+ Supports area transit capability
+ Supports NSSA (compatible with RFC 3101)
+ Does not support Database Exchange Summary List Optimization (RFC 5243)
+ Event-log enabled, Maximum number of events: 1000, Mode: cyclic
+ Router is not originating router-LSAs with maximum metric
+ Initial SPF schedule delay 5000 msecs
+ Minimum hold time between two consecutive SPFs 10000 msecs
+ Maximum wait time between two consecutive SPFs 10000 msecs
+ Incremental-SPF disabled
+ Minimum LSA interval 5 secs
+ Minimum LSA arrival 1000 msecs
+ LSA group pacing timer 240 secs
+ Interface flood pacing timer 33 msecs
+ Retransmission pacing timer 66 msecs
+ Number of external LSA 0. Checksum Sum 0x000000
+ Number of opaque AS LSA 0. Checksum Sum 0x000000
+ Number of DCbitless external and opaque AS LSA 0
+ Number of DoNotAge external and opaque AS LSA 0
+ Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+ Number of areas transit capable is 0
+ External flood list length 0
+ IETF NSF helper support enabled
+ Cisco NSF helper support enabled
+ Reference bandwidth unit is 100 mbps
+    Area BACKBONE(0)
+        Number of interfaces in this area is 2
+	Area has no authentication
+	SPF algorithm last executed 2d03h ago
+	SPF algorithm executed 15 times
+	Area ranges are
+	Number of LSA 14. Checksum Sum 0x06EB22
+	Number of opaque link LSA 0. Checksum Sum 0x000000
+	Number of DCbitless LSA 0
+	Number of indication LSA 0
+	Number of DoNotAge LSA 0
+	Flood list length 0
+
+Leaf2#
+
+2025-06-25 16:57:14,057: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show ip protocols' +++
+show ip protocols
+*** IP Routing is NSF aware ***
+
+Routing Protocol is "application"
+  Sending updates every 0 seconds
+  Invalid after 0 seconds, hold down 0, flushed after 0
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Maximum path: 32
+  Routing for Networks:
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+  Distance: (default is 4)
+
+Routing Protocol is "ospf 1"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Router ID 4.4.4.4
+  Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+  Routing on Interfaces Configured Explicitly (Area 0):
+    GigabitEthernet0/2
+    GigabitEthernet0/1
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+    1.1.1.1              110      2d03h
+    2.2.2.2              110      4d02h
+  Distance: (default is 110)
+
+Leaf2#
+
+2025-06-25 16:57:14,548: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 4.4.4.4
+Leaf2#
+
+2025-06-25 16:57:16,701: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show ip ospf mpls ldp interface' +++
+show ip ospf mpls ldp interface
+GigabitEthernet0/2
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+GigabitEthernet0/1
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+Leaf2#
+
+2025-06-25 16:57:17,226: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show ip ospf mpls traffic-eng link' +++
+show ip ospf mpls traffic-eng link
+
+            OSPF Router with ID (4.4.4.4) (Process ID 1)
+
+  Area 0 MPLS TE not initialized
+Leaf2#
+
+2025-06-25 16:57:17,742: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 4.4.4.4
+Leaf2#
+
+2025-06-25 16:57:19,898: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show ip ospf database router' +++
+show ip ospf database router
+
+            OSPF Router with ID (4.4.4.4) (Process ID 1)
+
+		Router Link States (Area 0)
+
+  LS age: 729
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 1.1.1.1
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000BB
+  Checksum: 0x9090
+  Length: 84
+  Number of Links: 5
+
+    Link connected to: a Stub Network
+     (Link ID) Network/subnet number: 77.77.77.77
+     (Link Data) Network Mask: 255.255.255.255
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.13
+     (Link Data) Router Interface address: 10.0.10.13
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.9
+     (Link Data) Router Interface address: 10.0.10.9
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.5
+     (Link Data) Router Interface address: 10.0.10.5
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.1
+     (Link Data) Router Interface address: 10.0.10.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1888
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 2.2.2.2
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000BA
+  Checksum: 0x30D
+  Length: 72
+  Number of Links: 4
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.13
+     (Link Data) Router Interface address: 10.0.20.13
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.9
+     (Link Data) Router Interface address: 10.0.20.9
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.5
+     (Link Data) Router Interface address: 10.0.20.5
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.1
+     (Link Data) Router Interface address: 10.0.20.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 816
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 3.3.3.3
+  Advertising Router: 3.3.3.3
+  LS Seq Number: 800000B9
+  Checksum: 0x5A8D
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.1
+     (Link Data) Router Interface address: 10.0.20.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.1
+     (Link Data) Router Interface address: 10.0.10.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 111
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 4.4.4.4
+  Advertising Router: 4.4.4.4
+  LS Seq Number: 800000B4
+  Checksum: 0x399B
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.5
+     (Link Data) Router Interface address: 10.0.20.6
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.5
+     (Link Data) Router Interface address: 10.0.10.6
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1485
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 5.5.5.5
+  Advertising Router: 5.5.5.5
+  LS Seq Number: 800000B4
+  Checksum: 0xEAE
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.9
+     (Link Data) Router Interface address: 10.0.20.10
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.9
+     (Link Data) Router Interface address: 10.0.10.10
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1011
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 6.6.6.6
+  Advertising Router: 6.6.6.6
+  LS Seq Number: 800000B7
+  Checksum: 0xDCC4
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.13
+     (Link Data) Router Interface address: 10.0.20.14
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.13
+     (Link Data) Router Interface address: 10.0.10.14
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+Leaf2#
+
+2025-06-25 16:57:20,491: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show ip ospf database network' +++
+show ip ospf database network
+
+            OSPF Router with ID (4.4.4.4) (Process ID 1)
+
+		Net Link States (Area 0)
+
+  LS age: 729
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.1 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 8000005D
+  Checksum: 0x7443
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 3.3.3.3
+
+  LS age: 729
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.5 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xD585
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 4.4.4.4
+
+  LS age: 729
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.9 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xDF73
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 5.5.5.5
+
+  LS age: 729
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.13 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xE961
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 6.6.6.6
+
+  LS age: 362
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.1 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x61EF
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 3.3.3.3
+
+  LS age: 362
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.5 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x6BDD
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 4.4.4.4
+
+  LS age: 362
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.9 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x75CB
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 5.5.5.5
+
+  LS age: 1889
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.13 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B0
+  Checksum: 0x81B8
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 6.6.6.6
+
+Leaf2#
+
+2025-06-25 16:57:21,024: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show ip ospf database external' +++
+show ip ospf database external
+
+            OSPF Router with ID (4.4.4.4) (Process ID 1)
+Leaf2#
+
+2025-06-25 16:57:21,518: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show ip ospf database summary' +++
+show ip ospf database summary
+
+            OSPF Router with ID (4.4.4.4) (Process ID 1)
+Leaf2#
+
+2025-06-25 16:57:22,028: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show ip ospf database opaque-area' +++
+show ip ospf database opaque-area
+
+            OSPF Router with ID (4.4.4.4) (Process ID 1)
+Leaf2#
+
+2025-06-25 16:57:22,529: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show ip ospf virtual-links' +++
+show ip ospf virtual-links
+Leaf2#
+
+2025-06-25 16:57:23,047: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show ip ospf interface' +++
+show ip ospf interface
+GigabitEthernet0/2 is up, line protocol is up (connected) 
+  Internet Address 10.0.20.6/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 4.4.4.4, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 2.2.2.2, Interface address 10.0.20.5
+  Backup Designated router (ID) 4.4.4.4, Interface address 10.0.20.6
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:09
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/2/2, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 5
+  Last flood scan time is 0 msec, maximum is 2 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 2.2.2.2  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+GigabitEthernet0/1 is up, line protocol is up (connected) 
+  Internet Address 10.0.10.6/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 4.4.4.4, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 1.1.1.1, Interface address 10.0.10.5
+  Backup Designated router (ID) 4.4.4.4, Interface address 10.0.10.6
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:03
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 3
+  Last flood scan time is 0 msec, maximum is 3 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 1.1.1.1  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+Leaf2#
+
+2025-06-25 16:57:23,568: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 4.4.4.4
+Leaf2#
+
+2025-06-25 16:57:25,676: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 4.4.4.4
+Leaf2#
+
+2025-06-25 16:57:27,796: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show ip ospf neighbor detail' +++
+show ip ospf neighbor detail
+ Neighbor 2.2.2.2, interface address 10.0.20.5
+    In the area 0 via interface GigabitEthernet0/2
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.20.5 BDR is 10.0.20.6
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:34
+    Neighbor is up for 4d02h   
+    Index 1/1/1, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+ Neighbor 1.1.1.1, interface address 10.0.10.5
+    In the area 0 via interface GigabitEthernet0/1
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.10.5 BDR is 10.0.10.6
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:37
+    Neighbor is up for 4d02h   
+    Index 1/2/2, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+Leaf2#
+
+2025-06-25 16:57:28,403: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show ip ospf interface GigabitEthernet0/2' +++
+show ip ospf interface GigabitEthernet0/2
+GigabitEthernet0/2 is up, line protocol is up (connected) 
+  Internet Address 10.0.20.6/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 4.4.4.4, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 2.2.2.2, Interface address 10.0.20.5
+  Backup Designated router (ID) 4.4.4.4, Interface address 10.0.20.6
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:04
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/2/2, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 5
+  Last flood scan time is 0 msec, maximum is 2 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 2.2.2.2  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+Leaf2#
+
+2025-06-25 16:57:29,041: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 4.4.4.4
+Leaf2#
+
+2025-06-25 16:57:31,218: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show ip ospf interface GigabitEthernet0/1' +++
+show ip ospf interface GigabitEthernet0/1
+GigabitEthernet0/1 is up, line protocol is up (connected) 
+  Internet Address 10.0.10.6/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 4.4.4.4, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 1.1.1.1, Interface address 10.0.10.5
+  Backup Designated router (ID) 4.4.4.4, Interface address 10.0.10.6
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:05
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 3
+  Last flood scan time is 0 msec, maximum is 3 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 1.1.1.1  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+Leaf2#
+
+2025-06-25 16:57:31,793: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 4.4.4.4
+Leaf2#
+
+2025-06-25 16:57:34,060: %UNICON-INFO: +++ Leaf2 with via 'cli': executing command 'show ip ospf sham-links' +++
+show ip ospf sham-links
+Leaf2#</msg>
+<msg time="2025-06-25T16:57:34.430163" level="INFO">/Users/dylan/personal_projects/cbtn-advanced-net-automation/.venv/lib/python3.11/site-packages/genie/abstract/magic.py:337: UserWarning: Abstract values defined under "custom" for device Leaf2
+  warnings.warn('Abstract values defined under "custom" for '</msg>
+<doc>Verify that a specific number of &lt;...&gt; is &lt;...&gt; on a device.</doc>
+<status status="PASS" start="2025-06-25T16:57:13.242254" elapsed="21.187944"/>
+</kw>
+<kw name="verify count &quot;2&quot; &quot;ospf neighbors&quot; on device &quot;Leaf3&quot;" owner="genie.libs.robot.GenieRobot" source_name="verify count &quot;${number:[^&quot;]+}&quot; &quot;${structure:[^&quot;]+}&quot; on device &quot;${device:[^&quot;]+}&quot;">
+<msg time="2025-06-25T16:57:44.374031" level="INFO">Could not learn &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfVirtualLinks'&gt; on &lt;unicon.plugins.iosxe.IosXESingleRpConnection object at 0x11d4aa410&gt;
+Show Command: show ip ospf virtual-links
+Parser Output is empty</msg>
+<msg time="2025-06-25T16:57:55.999754" level="INFO">Could not learn &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfShamLinks'&gt; on &lt;unicon.plugins.iosxe.IosXESingleRpConnection object at 0x11d4aa410&gt;
+Show Command: show ip ospf sham-links
+Parser Output is empty</msg>
+<msg time="2025-06-25T16:57:56.000211" level="INFO">+====================================================================================================================================================+</msg>
+<msg time="2025-06-25T16:57:56.000258" level="INFO">| Commands for learning feature 'Ospf'                                                                                                               |</msg>
+<msg time="2025-06-25T16:57:56.000296" level="INFO">+====================================================================================================================================================+</msg>
+<msg time="2025-06-25T16:57:56.000329" level="INFO">| - Parsed commands                                                                                                                                  |</msg>
+<msg time="2025-06-25T16:57:56.000359" level="INFO">|----------------------------------------------------------------------------------------------------------------------------------------------------|</msg>
+<msg time="2025-06-25T16:57:56.000389" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspf'&gt;                                                                                      |</msg>
+<msg time="2025-06-25T16:57:56.000418" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_protocols.ShowIpProtocols'&gt;, arguments: {'vrf':''}                                                     |</msg>
+<msg time="2025-06-25T16:57:56.000447" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfMplsLdpInterface'&gt;, arguments: {'interface':''}                                         |</msg>
+<msg time="2025-06-25T16:57:56.000478" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfMplsTrafficEngLink'&gt;                                                                    |</msg>
+<msg time="2025-06-25T16:57:56.000506" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseRouter'&gt;                                                               |</msg>
+<msg time="2025-06-25T16:57:56.000533" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseNetwork'&gt;                                                              |</msg>
+<msg time="2025-06-25T16:57:56.000561" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseExternal'&gt;                                                             |</msg>
+<msg time="2025-06-25T16:57:56.000588" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseSummary'&gt;                                                              |</msg>
+<msg time="2025-06-25T16:57:56.000616" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseOpaqueArea'&gt;                                                           |</msg>
+<msg time="2025-06-25T16:57:56.000645" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfInterface'&gt;, arguments: {'interface':''}                                                |</msg>
+<msg time="2025-06-25T16:57:56.000673" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfNeighborDetail'&gt;, arguments: {'neighbor':''}                                            |</msg>
+<msg time="2025-06-25T16:57:56.000700" level="INFO">|====================================================================================================================================================|</msg>
+<msg time="2025-06-25T16:57:56.000727" level="INFO">| - Commands with empty output                                                                                                                       |</msg>
+<msg time="2025-06-25T16:57:56.000791" level="INFO">|----------------------------------------------------------------------------------------------------------------------------------------------------|</msg>
+<msg time="2025-06-25T16:57:56.000872" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfVirtualLinks'&gt;                                                                          |</msg>
+<msg time="2025-06-25T16:57:56.000918" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfShamLinks'&gt;                                                                             |</msg>
+<msg time="2025-06-25T16:57:56.000954" level="INFO">|====================================================================================================================================================|</msg>
+<msg time="2025-06-25T16:57:56.061289" level="INFO">2025-06-25 16:57:34,761: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show ip ospf' +++
+show ip ospf
+ Routing Process "ospf 1" with ID 5.5.5.5
+ Start time: 00:12:57.436, Time elapsed: 4d02h
+ Supports only single TOS(TOS0) routes
+ Supports opaque LSA
+ Supports Link-local Signaling (LLS)
+ Supports area transit capability
+ Supports NSSA (compatible with RFC 3101)
+ Does not support Database Exchange Summary List Optimization (RFC 5243)
+ Event-log enabled, Maximum number of events: 1000, Mode: cyclic
+ Router is not originating router-LSAs with maximum metric
+ Initial SPF schedule delay 5000 msecs
+ Minimum hold time between two consecutive SPFs 10000 msecs
+ Maximum wait time between two consecutive SPFs 10000 msecs
+ Incremental-SPF disabled
+ Minimum LSA interval 5 secs
+ Minimum LSA arrival 1000 msecs
+ LSA group pacing timer 240 secs
+ Interface flood pacing timer 33 msecs
+ Retransmission pacing timer 66 msecs
+ Number of external LSA 0. Checksum Sum 0x000000
+ Number of opaque AS LSA 0. Checksum Sum 0x000000
+ Number of DCbitless external and opaque AS LSA 0
+ Number of DoNotAge external and opaque AS LSA 0
+ Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+ Number of areas transit capable is 0
+ External flood list length 0
+ IETF NSF helper support enabled
+ Cisco NSF helper support enabled
+ Reference bandwidth unit is 100 mbps
+    Area BACKBONE(0)
+        Number of interfaces in this area is 2
+	Area has no authentication
+	SPF algorithm last executed 2d03h ago
+	SPF algorithm executed 13 times
+	Area ranges are
+	Number of LSA 14. Checksum Sum 0x06EB22
+	Number of opaque link LSA 0. Checksum Sum 0x000000
+	Number of DCbitless LSA 0
+	Number of indication LSA 0
+	Number of DoNotAge LSA 0
+	Flood list length 0
+
+Leaf3#
+
+2025-06-25 16:57:35,197: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show ip protocols' +++
+show ip protocols
+*** IP Routing is NSF aware ***
+
+Routing Protocol is "application"
+  Sending updates every 0 seconds
+  Invalid after 0 seconds, hold down 0, flushed after 0
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Maximum path: 32
+  Routing for Networks:
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+  Distance: (default is 4)
+
+Routing Protocol is "ospf 1"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Router ID 5.5.5.5
+  Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+  Routing on Interfaces Configured Explicitly (Area 0):
+    GigabitEthernet0/2
+    GigabitEthernet0/1
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+    1.1.1.1              110      2d03h
+    2.2.2.2              110      4d02h
+  Distance: (default is 110)
+
+Leaf3#
+
+2025-06-25 16:57:35,654: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 5.5.5.5
+Leaf3#
+
+2025-06-25 16:57:37,895: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show ip ospf mpls ldp interface' +++
+show ip ospf mpls ldp interface
+GigabitEthernet0/2
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+GigabitEthernet0/1
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+Leaf3#
+
+2025-06-25 16:57:38,463: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show ip ospf mpls traffic-eng link' +++
+show ip ospf mpls traffic-eng link
+
+            OSPF Router with ID (5.5.5.5) (Process ID 1)
+
+  Area 0 MPLS TE not initialized
+Leaf3#
+
+2025-06-25 16:57:39,057: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 5.5.5.5
+Leaf3#
+
+2025-06-25 16:57:41,214: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show ip ospf database router' +++
+show ip ospf database router
+
+            OSPF Router with ID (5.5.5.5) (Process ID 1)
+
+		Router Link States (Area 0)
+
+  LS age: 750
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 1.1.1.1
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000BB
+  Checksum: 0x9090
+  Length: 84
+  Number of Links: 5
+
+    Link connected to: a Stub Network
+     (Link ID) Network/subnet number: 77.77.77.77
+     (Link Data) Network Mask: 255.255.255.255
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.13
+     (Link Data) Router Interface address: 10.0.10.13
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.9
+     (Link Data) Router Interface address: 10.0.10.9
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.5
+     (Link Data) Router Interface address: 10.0.10.5
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.1
+     (Link Data) Router Interface address: 10.0.10.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1910
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 2.2.2.2
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000BA
+  Checksum: 0x30D
+  Length: 72
+  Number of Links: 4
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.13
+     (Link Data) Router Interface address: 10.0.20.13
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.9
+     (Link Data) Router Interface address: 10.0.20.9
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.5
+     (Link Data) Router Interface address: 10.0.20.5
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.1
+     (Link Data) Router Interface address: 10.0.20.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 837
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 3.3.3.3
+  Advertising Router: 3.3.3.3
+  LS Seq Number: 800000B9
+  Checksum: 0x5A8D
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.1
+     (Link Data) Router Interface address: 10.0.20.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.1
+     (Link Data) Router Interface address: 10.0.10.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 134
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 4.4.4.4
+  Advertising Router: 4.4.4.4
+  LS Seq Number: 800000B4
+  Checksum: 0x399B
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.5
+     (Link Data) Router Interface address: 10.0.20.6
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.5
+     (Link Data) Router Interface address: 10.0.10.6
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1505
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 5.5.5.5
+  Advertising Router: 5.5.5.5
+  LS Seq Number: 800000B4
+  Checksum: 0xEAE
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.9
+     (Link Data) Router Interface address: 10.0.20.10
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.9
+     (Link Data) Router Interface address: 10.0.10.10
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1032
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 6.6.6.6
+  Advertising Router: 6.6.6.6
+  LS Seq Number: 800000B7
+  Checksum: 0xDCC4
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.13
+     (Link Data) Router Interface address: 10.0.20.14
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.13
+     (Link Data) Router Interface address: 10.0.10.14
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+Leaf3#
+
+2025-06-25 16:57:41,902: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show ip ospf database network' +++
+show ip ospf database network
+
+            OSPF Router with ID (5.5.5.5) (Process ID 1)
+
+		Net Link States (Area 0)
+
+  LS age: 751
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.1 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 8000005D
+  Checksum: 0x7443
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 3.3.3.3
+
+  LS age: 751
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.5 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xD585
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 4.4.4.4
+
+  LS age: 751
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.9 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xDF73
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 5.5.5.5
+
+  LS age: 751
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.13 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xE961
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 6.6.6.6
+
+  LS age: 384
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.1 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x61EF
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 3.3.3.3
+
+  LS age: 384
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.5 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x6BDD
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 4.4.4.4
+
+  LS age: 384
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.9 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x75CB
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 5.5.5.5
+
+  LS age: 1910
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.13 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B0
+  Checksum: 0x81B8
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 6.6.6.6
+
+Leaf3#
+
+2025-06-25 16:57:42,543: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show ip ospf database external' +++
+show ip ospf database external
+
+            OSPF Router with ID (5.5.5.5) (Process ID 1)
+Leaf3#
+
+2025-06-25 16:57:43,036: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show ip ospf database summary' +++
+show ip ospf database summary
+
+            OSPF Router with ID (5.5.5.5) (Process ID 1)
+Leaf3#
+
+2025-06-25 16:57:43,564: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show ip ospf database opaque-area' +++
+show ip ospf database opaque-area
+
+            OSPF Router with ID (5.5.5.5) (Process ID 1)
+Leaf3#
+
+2025-06-25 16:57:44,106: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show ip ospf virtual-links' +++
+show ip ospf virtual-links
+Leaf3#
+
+2025-06-25 16:57:44,738: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show ip ospf interface' +++
+show ip ospf interface
+GigabitEthernet0/2 is up, line protocol is up (connected) 
+  Internet Address 10.0.20.10/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 5.5.5.5, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 2.2.2.2, Interface address 10.0.20.9
+  Backup Designated router (ID) 5.5.5.5, Interface address 10.0.20.10
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:06
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/2/2, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 5, maximum is 5
+  Last flood scan time is 0 msec, maximum is 1 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 2.2.2.2  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+GigabitEthernet0/1 is up, line protocol is up (connected) 
+  Internet Address 10.0.10.10/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 5.5.5.5, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 1.1.1.1, Interface address 10.0.10.9
+  Backup Designated router (ID) 5.5.5.5, Interface address 10.0.10.10
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:07
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 3
+  Last flood scan time is 0 msec, maximum is 3 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 1.1.1.1  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+Leaf3#
+
+2025-06-25 16:57:45,261: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 5.5.5.5
+Leaf3#
+
+2025-06-25 16:57:47,405: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 5.5.5.5
+Leaf3#
+
+2025-06-25 16:57:49,610: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show ip ospf neighbor detail' +++
+show ip ospf neighbor detail
+ Neighbor 2.2.2.2, interface address 10.0.20.9
+    In the area 0 via interface GigabitEthernet0/2
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.20.9 BDR is 10.0.20.10
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:33
+    Neighbor is up for 4d02h   
+    Index 1/1/1, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+ Neighbor 1.1.1.1, interface address 10.0.10.9
+    In the area 0 via interface GigabitEthernet0/1
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.10.9 BDR is 10.0.10.10
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:35
+    Neighbor is up for 4d02h   
+    Index 1/2/2, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+Leaf3#
+
+2025-06-25 16:57:50,284: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show ip ospf interface GigabitEthernet0/2' +++
+show ip ospf interface GigabitEthernet0/2
+GigabitEthernet0/2 is up, line protocol is up (connected) 
+  Internet Address 10.0.20.10/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 5.5.5.5, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 2.2.2.2, Interface address 10.0.20.9
+  Backup Designated router (ID) 5.5.5.5, Interface address 10.0.20.10
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:00
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/2/2, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 5, maximum is 5
+  Last flood scan time is 0 msec, maximum is 1 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 2.2.2.2  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+Leaf3#
+
+2025-06-25 16:57:50,905: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 5.5.5.5
+Leaf3#
+
+2025-06-25 16:57:52,933: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show ip ospf interface GigabitEthernet0/1' +++
+show ip ospf interface GigabitEthernet0/1
+GigabitEthernet0/1 is up, line protocol is up (connected) 
+  Internet Address 10.0.10.10/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 5.5.5.5, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 1.1.1.1, Interface address 10.0.10.9
+  Backup Designated router (ID) 5.5.5.5, Interface address 10.0.10.10
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:08
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 3
+  Last flood scan time is 0 msec, maximum is 3 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 1.1.1.1  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+Leaf3#
+
+2025-06-25 16:57:53,533: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 5.5.5.5
+Leaf3#
+
+2025-06-25 16:57:55,737: %UNICON-INFO: +++ Leaf3 with via 'cli': executing command 'show ip ospf sham-links' +++
+show ip ospf sham-links
+Leaf3#</msg>
+<msg time="2025-06-25T16:57:56.061454" level="INFO">/Users/dylan/personal_projects/cbtn-advanced-net-automation/.venv/lib/python3.11/site-packages/genie/abstract/magic.py:337: UserWarning: Abstract values defined under "custom" for device Leaf3
+  warnings.warn('Abstract values defined under "custom" for '</msg>
+<doc>Verify that a specific number of &lt;...&gt; is &lt;...&gt; on a device.</doc>
+<status status="PASS" start="2025-06-25T16:57:34.430397" elapsed="21.631096"/>
+</kw>
+<kw name="verify count &quot;2&quot; &quot;ospf neighbors&quot; on device &quot;Leaf4&quot;" owner="genie.libs.robot.GenieRobot" source_name="verify count &quot;${number:[^&quot;]+}&quot; &quot;${structure:[^&quot;]+}&quot; on device &quot;${device:[^&quot;]+}&quot;">
+<msg time="2025-06-25T16:58:05.746366" level="INFO">Could not learn &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfVirtualLinks'&gt; on &lt;unicon.plugins.iosxe.IosXESingleRpConnection object at 0x11d438b90&gt;
+Show Command: show ip ospf virtual-links
+Parser Output is empty</msg>
+<msg time="2025-06-25T16:58:16.990919" level="INFO">Could not learn &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfShamLinks'&gt; on &lt;unicon.plugins.iosxe.IosXESingleRpConnection object at 0x11d438b90&gt;
+Show Command: show ip ospf sham-links
+Parser Output is empty</msg>
+<msg time="2025-06-25T16:58:16.991285" level="INFO">+====================================================================================================================================================+</msg>
+<msg time="2025-06-25T16:58:16.991329" level="INFO">| Commands for learning feature 'Ospf'                                                                                                               |</msg>
+<msg time="2025-06-25T16:58:16.991359" level="INFO">+====================================================================================================================================================+</msg>
+<msg time="2025-06-25T16:58:16.991387" level="INFO">| - Parsed commands                                                                                                                                  |</msg>
+<msg time="2025-06-25T16:58:16.991414" level="INFO">|----------------------------------------------------------------------------------------------------------------------------------------------------|</msg>
+<msg time="2025-06-25T16:58:16.991438" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspf'&gt;                                                                                      |</msg>
+<msg time="2025-06-25T16:58:16.991463" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_protocols.ShowIpProtocols'&gt;, arguments: {'vrf':''}                                                     |</msg>
+<msg time="2025-06-25T16:58:16.991488" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfMplsLdpInterface'&gt;, arguments: {'interface':''}                                         |</msg>
+<msg time="2025-06-25T16:58:16.991512" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfMplsTrafficEngLink'&gt;                                                                    |</msg>
+<msg time="2025-06-25T16:58:16.991536" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseRouter'&gt;                                                               |</msg>
+<msg time="2025-06-25T16:58:16.991559" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseNetwork'&gt;                                                              |</msg>
+<msg time="2025-06-25T16:58:16.991583" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseExternal'&gt;                                                             |</msg>
+<msg time="2025-06-25T16:58:16.991607" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseSummary'&gt;                                                              |</msg>
+<msg time="2025-06-25T16:58:16.991631" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf_database.ShowIpOspfDatabaseOpaqueArea'&gt;                                                           |</msg>
+<msg time="2025-06-25T16:58:16.991656" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfInterface'&gt;, arguments: {'interface':''}                                                |</msg>
+<msg time="2025-06-25T16:58:16.991680" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfNeighborDetail'&gt;, arguments: {'neighbor':''}                                            |</msg>
+<msg time="2025-06-25T16:58:16.991704" level="INFO">|====================================================================================================================================================|</msg>
+<msg time="2025-06-25T16:58:16.991727" level="INFO">| - Commands with empty output                                                                                                                       |</msg>
+<msg time="2025-06-25T16:58:16.991750" level="INFO">|----------------------------------------------------------------------------------------------------------------------------------------------------|</msg>
+<msg time="2025-06-25T16:58:16.991773" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfVirtualLinks'&gt;                                                                          |</msg>
+<msg time="2025-06-25T16:58:16.991797" level="INFO">|   cmd: &lt;class 'genie.libs.parser.iosxe.show_ospf.ShowIpOspfShamLinks'&gt;                                                                             |</msg>
+<msg time="2025-06-25T16:58:16.991820" level="INFO">|====================================================================================================================================================|</msg>
+<msg time="2025-06-25T16:58:17.054073" level="INFO">2025-06-25 16:57:56,408: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show ip ospf' +++
+show ip ospf
+ Routing Process "ospf 1" with ID 6.6.6.6
+ Start time: 00:14:10.892, Time elapsed: 4d02h
+ Supports only single TOS(TOS0) routes
+ Supports opaque LSA
+ Supports Link-local Signaling (LLS)
+ Supports area transit capability
+ Supports NSSA (compatible with RFC 3101)
+ Does not support Database Exchange Summary List Optimization (RFC 5243)
+ Event-log enabled, Maximum number of events: 1000, Mode: cyclic
+ Router is not originating router-LSAs with maximum metric
+ Initial SPF schedule delay 5000 msecs
+ Minimum hold time between two consecutive SPFs 10000 msecs
+ Maximum wait time between two consecutive SPFs 10000 msecs
+ Incremental-SPF disabled
+ Minimum LSA interval 5 secs
+ Minimum LSA arrival 1000 msecs
+ LSA group pacing timer 240 secs
+ Interface flood pacing timer 33 msecs
+ Retransmission pacing timer 66 msecs
+ Number of external LSA 0. Checksum Sum 0x000000
+ Number of opaque AS LSA 0. Checksum Sum 0x000000
+ Number of DCbitless external and opaque AS LSA 0
+ Number of DoNotAge external and opaque AS LSA 0
+ Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+ Number of areas transit capable is 0
+ External flood list length 0
+ IETF NSF helper support enabled
+ Cisco NSF helper support enabled
+ Reference bandwidth unit is 100 mbps
+    Area BACKBONE(0)
+        Number of interfaces in this area is 2
+	Area has no authentication
+	SPF algorithm last executed 2d03h ago
+	SPF algorithm executed 11 times
+	Area ranges are
+	Number of LSA 14. Checksum Sum 0x06EB22
+	Number of opaque link LSA 0. Checksum Sum 0x000000
+	Number of DCbitless LSA 0
+	Number of indication LSA 0
+	Number of DoNotAge LSA 0
+	Flood list length 0
+
+Leaf4#
+
+2025-06-25 16:57:56,896: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show ip protocols' +++
+show ip protocols
+*** IP Routing is NSF aware ***
+
+Routing Protocol is "application"
+  Sending updates every 0 seconds
+  Invalid after 0 seconds, hold down 0, flushed after 0
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Maximum path: 32
+  Routing for Networks:
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+  Distance: (default is 4)
+
+Routing Protocol is "ospf 1"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Router ID 6.6.6.6
+  Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+  Routing on Interfaces Configured Explicitly (Area 0):
+    GigabitEthernet0/2
+    GigabitEthernet0/1
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+    1.1.1.1              110      2d03h
+    2.2.2.2              110      4d02h
+  Distance: (default is 110)
+
+Leaf4#
+
+2025-06-25 16:57:57,367: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 6.6.6.6
+Leaf4#
+
+2025-06-25 16:57:59,514: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show ip ospf mpls ldp interface' +++
+show ip ospf mpls ldp interface
+GigabitEthernet0/2
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+GigabitEthernet0/1
+  Process ID 1, Area 0
+  LDP is not configured through LDP autoconfig
+  LDP-IGP Synchronization : Not required
+  Holddown timer is disabled
+  Interface is up 
+Leaf4#
+
+2025-06-25 16:58:00,077: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show ip ospf mpls traffic-eng link' +++
+show ip ospf mpls traffic-eng link
+
+            OSPF Router with ID (6.6.6.6) (Process ID 1)
+
+  Area 0 MPLS TE not initialized
+Leaf4#
+
+2025-06-25 16:58:00,630: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 6.6.6.6
+Leaf4#
+
+2025-06-25 16:58:02,651: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show ip ospf database router' +++
+show ip ospf database router
+
+            OSPF Router with ID (6.6.6.6) (Process ID 1)
+
+		Router Link States (Area 0)
+
+  LS age: 772
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 1.1.1.1
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000BB
+  Checksum: 0x9090
+  Length: 84
+  Number of Links: 5
+
+    Link connected to: a Stub Network
+     (Link ID) Network/subnet number: 77.77.77.77
+     (Link Data) Network Mask: 255.255.255.255
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.13
+     (Link Data) Router Interface address: 10.0.10.13
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.9
+     (Link Data) Router Interface address: 10.0.10.9
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.5
+     (Link Data) Router Interface address: 10.0.10.5
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.1
+     (Link Data) Router Interface address: 10.0.10.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1931
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 2.2.2.2
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000BA
+  Checksum: 0x30D
+  Length: 72
+  Number of Links: 4
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.13
+     (Link Data) Router Interface address: 10.0.20.13
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.9
+     (Link Data) Router Interface address: 10.0.20.9
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.5
+     (Link Data) Router Interface address: 10.0.20.5
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.1
+     (Link Data) Router Interface address: 10.0.20.1
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 859
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 3.3.3.3
+  Advertising Router: 3.3.3.3
+  LS Seq Number: 800000B9
+  Checksum: 0x5A8D
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.1
+     (Link Data) Router Interface address: 10.0.20.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.1
+     (Link Data) Router Interface address: 10.0.10.2
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 155
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 4.4.4.4
+  Advertising Router: 4.4.4.4
+  LS Seq Number: 800000B4
+  Checksum: 0x399B
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.5
+     (Link Data) Router Interface address: 10.0.20.6
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.5
+     (Link Data) Router Interface address: 10.0.10.6
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1528
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 5.5.5.5
+  Advertising Router: 5.5.5.5
+  LS Seq Number: 800000B4
+  Checksum: 0xEAE
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.9
+     (Link Data) Router Interface address: 10.0.20.10
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.9
+     (Link Data) Router Interface address: 10.0.10.10
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+  LS age: 1052
+  Options: (No TOS-capability, DC)
+  LS Type: Router Links
+  Link State ID: 6.6.6.6
+  Advertising Router: 6.6.6.6
+  LS Seq Number: 800000B7
+  Checksum: 0xDCC4
+  Length: 48
+  Number of Links: 2
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.20.13
+     (Link Data) Router Interface address: 10.0.20.14
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+    Link connected to: a Transit Network
+     (Link ID) Designated Router address: 10.0.10.13
+     (Link Data) Router Interface address: 10.0.10.14
+      Number of MTID metrics: 0
+       TOS 0 Metrics: 1
+
+
+Leaf4#
+
+2025-06-25 16:58:03,225: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show ip ospf database network' +++
+show ip ospf database network
+
+            OSPF Router with ID (6.6.6.6) (Process ID 1)
+
+		Net Link States (Area 0)
+
+  LS age: 772
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.1 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 8000005D
+  Checksum: 0x7443
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 3.3.3.3
+
+  LS age: 772
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.5 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xD585
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 4.4.4.4
+
+  LS age: 772
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.9 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xDF73
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 5.5.5.5
+
+  LS age: 772
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.10.13 (address of Designated Router)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 800000B1
+  Checksum: 0xE961
+  Length: 32
+  Network Mask: /30
+	Attached Router: 1.1.1.1
+	Attached Router: 6.6.6.6
+
+  LS age: 405
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.1 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x61EF
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 3.3.3.3
+
+  LS age: 405
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.5 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x6BDD
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 4.4.4.4
+
+  LS age: 405
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.9 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B1
+  Checksum: 0x75CB
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 5.5.5.5
+
+  LS age: 1931
+  Options: (No TOS-capability, DC)
+  LS Type: Network Links
+  Link State ID: 10.0.20.13 (address of Designated Router)
+  Advertising Router: 2.2.2.2
+  LS Seq Number: 800000B0
+  Checksum: 0x81B8
+  Length: 32
+  Network Mask: /30
+	Attached Router: 2.2.2.2
+	Attached Router: 6.6.6.6
+
+Leaf4#
+
+2025-06-25 16:58:03,786: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show ip ospf database external' +++
+show ip ospf database external
+
+            OSPF Router with ID (6.6.6.6) (Process ID 1)
+Leaf4#
+
+2025-06-25 16:58:04,361: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show ip ospf database summary' +++
+show ip ospf database summary
+
+            OSPF Router with ID (6.6.6.6) (Process ID 1)
+Leaf4#
+
+2025-06-25 16:58:04,899: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show ip ospf database opaque-area' +++
+show ip ospf database opaque-area
+
+            OSPF Router with ID (6.6.6.6) (Process ID 1)
+Leaf4#
+
+2025-06-25 16:58:05,428: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show ip ospf virtual-links' +++
+show ip ospf virtual-links
+Leaf4#
+
+2025-06-25 16:58:05,985: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show ip ospf interface' +++
+show ip ospf interface
+GigabitEthernet0/2 is up, line protocol is up (connected) 
+  Internet Address 10.0.20.14/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 6.6.6.6, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 2.2.2.2, Interface address 10.0.20.13
+  Backup Designated router (ID) 6.6.6.6, Interface address 10.0.20.14
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:02
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/2/2, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 5, maximum is 5
+  Last flood scan time is 0 msec, maximum is 1 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 2.2.2.2  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+GigabitEthernet0/1 is up, line protocol is up (connected) 
+  Internet Address 10.0.10.14/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 6.6.6.6, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 1.1.1.1, Interface address 10.0.10.13
+  Backup Designated router (ID) 6.6.6.6, Interface address 10.0.10.14
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:01
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 3
+  Last flood scan time is 1 msec, maximum is 2 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 1.1.1.1  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+Leaf4#
+
+2025-06-25 16:58:06,491: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 6.6.6.6
+Leaf4#
+
+2025-06-25 16:58:08,640: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 6.6.6.6
+Leaf4#
+
+2025-06-25 16:58:10,787: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show ip ospf neighbor detail' +++
+show ip ospf neighbor detail
+ Neighbor 2.2.2.2, interface address 10.0.20.13
+    In the area 0 via interface GigabitEthernet0/2
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.20.13 BDR is 10.0.20.14
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:31
+    Neighbor is up for 4d02h   
+    Index 1/2/2, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+ Neighbor 1.1.1.1, interface address 10.0.10.13
+    In the area 0 via interface GigabitEthernet0/1
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 10.0.10.13 BDR is 10.0.10.14
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:37
+    Neighbor is up for 4d02h   
+    Index 1/1/1, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+Leaf4#
+
+2025-06-25 16:58:11,305: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show ip ospf interface GigabitEthernet0/2' +++
+show ip ospf interface GigabitEthernet0/2
+GigabitEthernet0/2 is up, line protocol is up (connected) 
+  Internet Address 10.0.20.14/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 6.6.6.6, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 2.2.2.2, Interface address 10.0.20.13
+  Backup Designated router (ID) 6.6.6.6, Interface address 10.0.20.14
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:07
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/2/2, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 5, maximum is 5
+  Last flood scan time is 0 msec, maximum is 1 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 2.2.2.2  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+Leaf4#
+
+2025-06-25 16:58:11,863: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 6.6.6.6
+Leaf4#
+
+2025-06-25 16:58:13,928: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show ip ospf interface GigabitEthernet0/1' +++
+show ip ospf interface GigabitEthernet0/1
+GigabitEthernet0/1 is up, line protocol is up (connected) 
+  Internet Address 10.0.10.14/30, Area 0, Attached via Interface Enable
+  Process ID 1, Router ID 6.6.6.6, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Enabled by interface config, including secondary ip addresses
+  Transmit Delay is 1 sec, State BDR, Priority 1
+  Designated Router (ID) 1.1.1.1, Interface address 10.0.10.13
+  Backup Designated router (ID) 6.6.6.6, Interface address 10.0.10.14
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:02
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 3
+  Last flood scan time is 1 msec, maximum is 2 msec
+  Neighbor Count is 1, Adjacent neighbor count is 1 
+    Adjacent with neighbor 1.1.1.1  (Designated Router)
+  Suppress hello for 0 neighbor(s)
+Leaf4#
+
+2025-06-25 16:58:14,551: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show running-config | section router ospf 1' +++
+show running-config | section router ospf 1
+router ospf 1
+ router-id 6.6.6.6
+Leaf4#
+
+2025-06-25 16:58:16,714: %UNICON-INFO: +++ Leaf4 with via 'cli': executing command 'show ip ospf sham-links' +++
+show ip ospf sham-links
+Leaf4#</msg>
+<msg time="2025-06-25T16:58:17.054266" level="INFO">/Users/dylan/personal_projects/cbtn-advanced-net-automation/.venv/lib/python3.11/site-packages/genie/abstract/magic.py:337: UserWarning: Abstract values defined under "custom" for device Leaf4
+  warnings.warn('Abstract values defined under "custom" for '</msg>
+<doc>Verify that a specific number of &lt;...&gt; is &lt;...&gt; on a device.</doc>
+<status status="PASS" start="2025-06-25T16:57:56.061711" elapsed="20.992603"/>
+</kw>
+<status status="PASS" start="2025-06-25T16:55:44.146306" elapsed="152.908187"/>
+</test>
+<test id="s1-t3" name="Disconnect from device" line="20">
+<kw name="disconnect from all devices" owner="ats.robot.pyATSRobot">
+<doc>Disconnect from all devices with default alias.</doc>
+<status status="PASS" start="2025-06-25T16:58:17.054804" elapsed="66.120678"/>
+</kw>
+<status status="PASS" start="2025-06-25T16:58:17.054594" elapsed="66.121402"/>
+</test>
+<status status="PASS" start="2025-06-25T16:55:06.383319" elapsed="256.793645"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Ospf1" id="s1" pass="3" fail="0" skip="0">Ospf1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-06-25T16:55:07.305035" level="WARN">Could not load the trigger datafile correctly, did you specify 'uut' device alias?</msg>
+</errors>
+</robot>

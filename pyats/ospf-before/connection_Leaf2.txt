@@ -1,0 +1,12 @@
+
+2025-06-23 12:42:57,376: %UNICON-INFO: +++ Leaf2 logfile ospf-before/connection_Leaf2.txt +++
+
+2025-06-23 12:42:57,376: %UNICON-INFO: +++ Unicon plugin iosxr (unicon.plugins.iosxr) +++
+
+
+2025-06-23 12:42:59,792: %UNICON-INFO: +++ connection to spawn: ssh -l dylan 10.0.0.24, id: 4547074448 +++
+
+2025-06-23 12:42:59,793: %UNICON-INFO: connection to Leaf2
+(dylan@10.0.0.24) Password: 
+
+Leaf2#

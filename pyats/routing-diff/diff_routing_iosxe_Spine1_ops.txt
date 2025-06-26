@@ -1,0 +1,17 @@
+--- routing-pre/routing_iosxe_Spine1_ops.txt
++++ routing-post/routing_iosxe_Spine1_ops.txt
+ info:
+  vrf:
+   default:
+    address_family:
+     ipv4:
+      routes:
++      77.77.77.77/32:
++       active: True
++       next_hop:
++        outgoing_interface:
++         Loopback77:
++          outgoing_interface: Loopback77
++       route: 77.77.77.77/32
++       source_protocol: connected
++       source_protocol_codes: C
