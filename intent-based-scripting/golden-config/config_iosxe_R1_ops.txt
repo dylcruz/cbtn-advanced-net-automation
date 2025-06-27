@@ -1,0 +1,92 @@
+{
+  "archive": {
+    "path flash:archive": {},
+    "write-memory": {}
+  },
+  "boot-end-marker": {},
+  "boot-start-marker": {},
+  "control-plane": {},
+  "enable secret 9 $9$ZYAg/45h3e8FOv$YIszHzTYhKLWhqSPvQhUFF692MUxwAYodwbJSBtDF7s": {},
+  "end": {},
+  "file prompt quiet": {},
+  "hostname R1": {},
+  "interface GigabitEthernet0/0": {
+    "duplex auto": {},
+    "ip address 10.0.0.21 255.255.255.0": {},
+    "media-type rj45": {},
+    "speed auto": {},
+    "vrf forwarding MGMT": {}
+  },
+  "interface GigabitEthernet0/1": {
+    "duplex auto": {},
+    "ip address 10.0.10.1 255.255.255.252": {},
+    "media-type rj45": {},
+    "speed auto": {}
+  },
+  "interface GigabitEthernet0/2": {
+    "duplex auto": {},
+    "media-type rj45": {},
+    "no ip address": {},
+    "shutdown": {},
+    "speed auto": {}
+  },
+  "interface GigabitEthernet0/3": {
+    "duplex auto": {},
+    "media-type rj45": {},
+    "no ip address": {},
+    "shutdown": {},
+    "speed auto": {}
+  },
+  "interface Loopback0": {
+    "ip address 1.1.1.1 255.255.255.255": {}
+  },
+  "ip access-list extended ACL1": {
+    "deny   ip any any": {}
+  },
+  "ip access-list extended ACL2": {
+    "deny   icmp host 8.8.8.8 any": {},
+    "permit ip any any": {}
+  },
+  "ip cef": {},
+  "ip domain name cisco.com": {},
+  "ip forward-protocol nd": {},
+  "ip scp server enable": {},
+  "ip ssh version 2": {},
+  "ipv6 ioam timestamp": {},
+  "line aux 0": {},
+  "line con 0": {
+    "logging synchronous": {}
+  },
+  "line vty 0 4": {
+    "login local": {},
+    "transport input ssh": {}
+  },
+  "mmi polling-interval 60": {},
+  "mmi snmp-timeout 180": {},
+  "multilink bundle-name authenticated": {},
+  "no aaa new-model": {},
+  "no ip http secure-server": {},
+  "no ip http server": {},
+  "no ipv6 cef": {},
+  "no mmi auto-configure": {},
+  "no mmi pvc": {},
+  "no scheduler allocate": {},
+  "no service password-encryption": {},
+  "ntp server 1.1.1.1 prefer": {},
+  "ntp server 11.11.11.11": {},
+  "ntp update-calendar": {},
+  "redundancy": {},
+  "router ospf 1": {
+    "network 1.1.1.1 0.0.0.0 area 1": {},
+    "network 10.0.10.0 0.0.0.3 area 0": {},
+    "router-id 1.1.1.1": {}
+  },
+  "service timestamps debug datetime msec": {},
+  "service timestamps log datetime msec": {},
+  "username dylan privilege 15 password 0 password1": {},
+  "version 15.9": {},
+  "vrf definition MGMT": {
+    "address-family ipv4": {},
+    "exit-address-family": {}
+  }
+}

@@ -1,0 +1,25 @@
+OSPF:
+  process_id: '2'
+  router_id: '2.2.2.2'
+  redistributing:
+    - 'connected subnets'
+    - 'eigrp 22 subnets'
+  networks:
+    - '1.1.1.1 0.0.0.0 area 2'
+    - '10.0.10.0 0.0.0.3 area 0'
+ACL:
+  - ACL1:
+    name: 'ACL1'
+    rules:
+      - 'permit ip any any'
+      - 'deny ip any any'
+  - ACL2:
+    name: 'ACL2'
+    rules:
+      - 'permit icmp any host 4.4.4.4'
+      - 'deny tcp host 1.1.1.1 host 3.3.3.3 eq telnet'
+NTP:
+  update_calendar: True
+  servers:
+    - '2.2.2.2 prefer'
+    - '22.22.22.22'

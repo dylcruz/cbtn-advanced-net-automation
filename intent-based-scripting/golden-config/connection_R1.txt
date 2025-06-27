@@ -1,0 +1,176 @@
+
+2025-06-27 16:19:42,451: %UNICON-INFO: +++ R1 logfile golden-config/connection_R1.txt +++
+
+2025-06-27 16:19:42,452: %UNICON-INFO: +++ Unicon plugin iosxe (unicon.plugins.iosxe) +++
+
+
+2025-06-27 16:19:44,916: %UNICON-INFO: +++ connection to spawn: ssh -l dylan 10.0.0.21, id: 4953582096 +++
+
+2025-06-27 16:19:44,916: %UNICON-INFO: connection to R1
+(dylan@10.0.0.21) Password: 
+
+
+
+R1#
+
+R1#
+
+2025-06-27 16:19:45,407: %UNICON-INFO: +++ R1 with via 'cli': executing command 'show version | include operating mode' +++
+show version | include operating mode
+R1#
+
+2025-06-27 16:19:45,651: %UNICON-INFO: +++ initializing handle +++
+
+2025-06-27 16:19:45,886: %UNICON-INFO: +++ R1 with via 'cli': executing command 'term length 0' +++
+term length 0
+R1#
+
+2025-06-27 16:19:46,279: %UNICON-INFO: +++ R1 with via 'cli': executing command 'term width 0' +++
+term width 0
+R1#
+
+2025-06-27 16:19:46,702: %UNICON-INFO: +++ R1 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.9(3)M6, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2022 by Cisco Systems, Inc.
+Compiled Mon 08-Aug-22 15:22 by mcpre
+
+
+ROM: Bootstrap program is IOSv
+
+R1 uptime is 5 hours, 54 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv (revision 1.0) with  with 984321K/62464K bytes of memory.
+Processor board ID 9NY6UVHPZJHV1TQVR0JFF
+4 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+2097152K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+
+
+Configuration register is 0x0
+
+R1#
+
+2025-06-27 16:19:47,153: %UNICON-INFO: +++ R1 with via 'cli': executing command 'show install summary' +++
+show install summary
+show install summary
+       ^
+% Invalid input detected at '^' marker.
+
+R1#
+
+2025-06-27 16:19:47,371: %UNICON-ERROR: Could not learn the os version
+
+2025-06-27 16:42:21,397: %UNICON-INFO: +++ R1 logfile golden-config/connection_R1.txt +++
+
+2025-06-27 16:42:21,397: %UNICON-INFO: +++ Unicon plugin iosxe (unicon.plugins.iosxe) +++
+
+
+2025-06-27 16:42:23,990: %UNICON-INFO: +++ connection to spawn: ssh -l dylan 10.0.0.21, id: 4693496784 +++
+
+2025-06-27 16:42:23,990: %UNICON-INFO: connection to R1
+(dylan@10.0.0.21) Password: 
+
+
+
+R1#
+
+R1#
+
+2025-06-27 16:42:24,517: %UNICON-INFO: +++ R1 with via 'cli': executing command 'show version | include operating mode' +++
+show version | include operating mode
+R1#
+
+2025-06-27 16:42:24,762: %UNICON-INFO: +++ initializing handle +++
+
+2025-06-27 16:42:25,108: %UNICON-INFO: +++ R1 with via 'cli': executing command 'term length 0' +++
+term length 0
+R1#
+
+2025-06-27 16:42:25,546: %UNICON-INFO: +++ R1 with via 'cli': executing command 'term width 0' +++
+term width 0
+R1#
+
+2025-06-27 16:42:26,087: %UNICON-INFO: +++ R1 with via 'cli': executing command 'show version' +++
+show version
+Cisco IOS Software, IOSv Software (VIOS-ADVENTERPRISEK9-M), Version 15.9(3)M6, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2022 by Cisco Systems, Inc.
+Compiled Mon 08-Aug-22 15:22 by mcpre
+
+
+ROM: Bootstrap program is IOSv
+
+R1 uptime is 6 hours, 17 minutes
+System returned to ROM by reload
+System image file is "flash0:/vios-adventerprisek9-m"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Cisco IOSv (revision 1.0) with  with 984321K/62464K bytes of memory.
+Processor board ID 9NY6UVHPZJHV1TQVR0JFF
+4 Gigabit Ethernet interfaces
+DRAM configuration is 72 bits wide with parity disabled.
+256K bytes of non-volatile configuration memory.
+2097152K bytes of ATA System CompactFlash 0 (Read/Write)
+0K bytes of ATA CompactFlash 1 (Read/Write)
+0K bytes of ATA CompactFlash 2 (Read/Write)
+0K bytes of ATA CompactFlash 3 (Read/Write)
+
+
+
+Configuration register is 0x0
+
+R1#
+
+2025-06-27 16:42:26,521: %UNICON-INFO: +++ R1 with via 'cli': executing command 'show install summary' +++
+show install summary
+show install summary
+       ^
+% Invalid input detected at '^' marker.
+
+R1#
+
+2025-06-27 16:42:26,717: %UNICON-ERROR: Could not learn the os version

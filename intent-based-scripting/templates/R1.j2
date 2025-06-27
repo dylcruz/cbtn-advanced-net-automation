@@ -1,0 +1,158 @@
+!
+version 15.9
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+vrf definition MGMT
+ !
+ address-family ipv4
+ exit-address-family
+!
+enable secret 9 $9$ZYAg/45h3e8FOv$YIszHzTYhKLWhqSPvQhUFF692MUxwAYodwbJSBtDF7s
+!
+no aaa new-model
+!
+!
+!
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip domain name cisco.com
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+archive
+ path flash:archive
+ write-memory
+file prompt quiet
+username dylan privilege 15 password 0 password1
+!
+redundancy
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 1.1.1.1 255.255.255.255
+!
+interface GigabitEthernet0/0
+ vrf forwarding MGMT
+ ip address 10.0.0.21 255.255.255.0
+ duplex auto
+ speed auto
+ media-type rj45
+!
+interface GigabitEthernet0/1
+ ip address 10.0.10.1 255.255.255.252
+ duplex auto
+ speed auto
+ media-type rj45
+!
+interface GigabitEthernet0/2
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+ media-type rj45
+!
+interface GigabitEthernet0/3
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+ media-type rj45
+!
+{% if host.facts.OSPF is defined %}
+router ospf {{ host.facts.OSPF.process_id }}
+ router-id {{ host.facts.OSPF.router_id }}
+{% if host.facts.OSPF.redistributing is defined %}
+{% for policy in host.facts.OSPF.redistributing %}
+ redistribute {{ policy }}
+{% endfor %}
+{% endif %}
+{% if host.facts.OSPF.networks is defined %}
+{% for network in host.facts.OSPF.networks %}
+ network {{ network }}
+{% endfor %}
+{% endif %}
+{% endif %}
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+ip ssh version 2
+ip scp server enable
+!
+{% if host.facts.ACL is defined %}
+{% for acl in host.facts.ACL %}
+ip access-list extended {{ acl.name }}
+{% for rule in acl.rules %}
+ {{ rule }}
+ {% endfor %}
+{% endfor%}
+{% endif %}
+!
+ipv6 ioam timestamp
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ login local
+ transport input ssh
+!
+no scheduler allocate
+{% if host.facts.NTP is defined %}
+{% if host.facts.NTP.update_calendar == True %}
+ntp update-calendar
+{% endif %}
+{% if host.facts.NTP.servers is defined %}
+{% for server in host.facts.NTP.servers %}
+ntp server {{ server }}
+{% endfor %}
+{% endif %}
+{% endif %}
+!
+end

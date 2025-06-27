@@ -1,0 +1,21 @@
+OSPF:
+  process_id: '1'
+  router_id: '1.1.1.1'
+  networks:
+    - '1.1.1.1 0.0.0.0 area 1'
+    - '10.0.10.0 0.0.0.3 area 0'
+ACL:
+  - ACL1:
+    name: 'ACL1'
+    rules:
+      - 'deny ip any any'
+  - ACL2:
+    name: 'ACL2'
+    rules:
+      - 'permit ip any any'
+      - 'deny icmp host 8.8.8.8 any'
+NTP:
+  update_calendar: True
+  servers:
+    - '1.1.1.1 prefer'
+    - '11.11.11.11'
