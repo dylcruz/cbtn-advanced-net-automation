@@ -1,0 +1,9 @@
+---
+
+cisco_group:
+    platform: "ios"
+    connection_options:
+        ncclient:
+            extras:
+                allow_agent: False
+                hostkey_verify: False
