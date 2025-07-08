@@ -1,0 +1,17 @@
+module nuggets {
+    namespace "http://cbtnuggets.com/ns/yang/ipvzero";
+    prefix cbtn;
+
+    revision 2025-07-07 {
+        description "Random YANG model to test validation";
+    }
+
+    container ipvzero {
+        list interfaces {
+            key name;
+            leaf name {
+                type string;
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+---
+R1:
+    hostname: "10.0.0.29"
+    port: 830
+    groups:
+        - cisco_group

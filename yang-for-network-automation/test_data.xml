@@ -1,0 +1,14 @@
+<cbtn:ipvzero xmlns:cbtn="http://cbtnuggets.com/ns/yang/ipvzero">
+<cbtn:interfaces>
+    <cbtn:name>GigabitEthernet0/1</cbtn:name>
+</cbtn:interfaces>
+<cbtn:interfaces>
+    <cbtn:name>GigabitEthernet0/2</cbtn:name>
+</cbtn:interfaces>
+<cbtn:interfaces>
+    <cbtn:name>GigabitEthernet0/3</cbtn:name>
+</cbtn:interfaces>
+<cbtn:interfaces>
+    <cbtn:name>Loopback0</cbtn:name>
+</cbtn:interfaces>
+</cbtn:ipvzero>
