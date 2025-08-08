@@ -1,0 +1,13 @@
+---
+
+R1:
+    hostname: "10.0.0.26"
+    port: "6030"
+    groups:
+        - arista_group
+
+R2:
+    hostname: "10.0.0.27"
+    port: "6030"
+    groups:
+        - arista_group
