@@ -1,0 +1,16 @@
+---
+
+LEFT:
+    hostname: "10.0.0.221"
+    groups:
+        - cisco_group
+
+MIDDLE:
+    hostname: "10.0.0.222"
+    groups:
+        - cisco_group
+
+RIGHT:
+    hostname: "10.0.0.223"
+    groups:
+        - cisco_group
